@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>📝 FINAL Ultimate HTML Form </h1>
+    <p>Form = Website ka dukaan wala counter. Yaha se data server tak jata hai</p>
+    <hr>
+
+    <form action="/action.php" method="post">
+        <h3>1. Basic Details</h3>
+        <label for="username">Username <sup>*Required</sup></label>
+        <input type="text" id="username" name="username" placeholder="Enter your Name" required>
+        <label for="userpass">Password:</label>
+        <input type="password" id="userpass" name="password" placeholder="Password" autofocus>
+        <br><br>
+        <label for="useremail">Email<sup>*Required</sup></label><br>
+        <input type="email" id="useremail" name="email" placeholder="abc@mail.com" required>
+        <br><br>
+        <label for="userphone">Phone - Pattern: Sirf 10 digit:</label><br>
+        <input type="tel" id="userphone" name="phone" placeholder="9876543210" pattern="[0-9]{10}">
+        <br><br>
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob">
+        <br><br>
+        <hr>
+        <h3>2. Button ka Actual Use Case</h3>
+        <p>Note: type="button" khud kuch nahi karta. Iske saath JS lagta hai</p>
+        <input type="button" value="Auto Fill Name" onclick="document.getElementById('username').value='Hello User'">
+        <br>
+        <hr>
+        <h3>3. Pro Attributes - Live Example</h3>
+        <label for="school">School Name - Readonly: Dekh sakte, change nahi</label><br>
+        <input type="text" id="school" name="school" value="ABC Public School" readonly>
+        <br><br>
+        <label for="rollno">Roll No - Disabled: Na dekhega, na jayega server ko</label><br>
+        <input type="text" id="rollno" name="rollno" value="101" disabled>
+        <br><br>
+        <hr>
+        <h3>4. Education - Radio Button</h3>
+        <input type="radio" id="8th" name="Edu" value="8th">
+        <label for="8th">8th</label>
+        <br>
+        <input type="radio" id="10th" name="Edu" value="10th">
+        <label for="10th">10th</label>
+        <br>
+        <input type="radio" id="12th" name="Edu" value="12th">
+        <label for="12th">12th</label>
+        <br>
+        <input type="radio" id="graduate" name="Edu" value="Graduate">
+        <label for="graduate">Graduate</label>
+        <hr>
+        <h3>5. Subjects - Checkbox</h3>
+        <input type="checkbox" id="phy" name="Sub" value="Phy">
+        <label for="phy">Phy</label>
+        <br>
+        <input type="checkbox" id="chem" name="Sub" value="Chem">
+        <label for="chem">Chem</label>
+        <br>
+        <input type="checkbox" id="maths" name="Sub" value="Maths">
+        <label for="maths">Maths</label>
+        <br>
+        <input type="checkbox" id="bio" name="Sub" value="Bio">
+        <label for="bio">Bio</label>
+        <hr>
+        <h3>6. City - Select Tag</h3>
+        <label for="city">Sheher chuno:</label><br>
+        <select id="city" name="city">
+            <option value="">-- City Chuno --</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="hyd">Hyderabad</option>
+        </select>
+        <br><br>
+        <hr>
+        <h3>7. Feedback - Textarea</h3>
+        <label for="msg">Please Give your Feedback</label><br>
+        <textarea id="msg" name="msg" rows="4" cols="40" placeholder="Yaha likho..."></textarea>
+        <br><br>
+        <hr>
+        <h3>8. Other Input Types</h3>
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color">
+        <br><br>
+        <label for="range">Rate 1 to 100:</label>
+        <input type="range" id="range" name="range">
+        <br><br>
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+        <br><br>
+        <hr>
+        <h3>9. 4 Pro Attributes - Revision Table</h3>
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Attribute</th>
+                <th>Kaam</th>
+                <th>Server ko data jayega?</th>
+                <th>User change kar sakta?</th>
+            </tr>
+            <tr>
+                <td><b>required</b></td>
+                <td>Bharna compulsory hai. Khali chhodoge to error</td>
+                <td>Haan</td>
+                <td>Haan</td>
+            </tr>
+            <tr>
+                <td><b>readonly</b></td>
+                <td>Sirf dekh sakte ho. Pencil nahi chalegi</td>
+                <td>Haan</td>
+                <td>Nahi</td>
+            </tr>
+            <tr>
+                <td><b>disabled</b></td>
+                <td>Box band hai. Tala laga hai</td>
+                <td>Nahi</td>
+                <td>Nahi</td>
+            </tr>
+            <tr>
+                <td><b>pattern="[0-9]{10}"</b></td>
+                <td>Guard hai. Sirf 10 digit number lega</td>
+                <td>Haan, agar sahi hai to</td>
+                <td>Haan</td>
+            </tr>
+        </table>
+        <br><br>
+        <hr>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to Terms and Conditions *Required</label>
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </form>
+
+    <a href="Source code for Ultimate Form.html">Source code for Ultimate Form</a>
+
+
+</body>
+
+</html>

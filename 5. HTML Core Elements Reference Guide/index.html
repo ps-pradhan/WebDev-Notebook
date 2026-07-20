@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Core Elements</title>
+</head>
+
+<body>
+
+    <h1> HTML CORE ELEMENTS REFERENCE GUIDE </h1>
+
+    <!-- ========== CARD 1 to 8 ========== -->
+
+    <!-- Card 1: List in HTML -->
+    <h2>1. List in HTML</h2>
+    <h3>Lists are used to represent real life list data</h3>
+
+    <p><u>Unordered List</u></p>
+    <pre><code>
+&lt;ul&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Mango&lt;/li&gt;
+&lt;/ul&gt;
+        </code></pre>
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+    </ul>
+
+    <p><u>Ordered List</u></p>
+    <ol>
+        <li>Apple</li>
+        <li>Mango</li>
+    </ol>
+
+    <hr>
+
+    <!-- Card 2: Tables in HTML -->
+    <h2>2. Tables in HTML</h2>
+    <b>Tables are used to represent real life table data</b>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+        </tr>
+        <tr>
+            <td>Shradha</td>
+            <td>1664</td>
+        </tr>
+    </table>
+
+    <p>th = header, td = data</p>
+
+    <hr>
+
+    <!-- Card 3: Caption in Tables -->
+    <h2>3. Caption in Tables</h2>
+    <table>
+        <caption>Student Data</caption>
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+        </tr>
+        <tr>
+            <td>Shradha</td>
+            <td>1664</td>
+        </tr>
+    </table>
+    <p>caption tag adds title to table</p>
+
+    <hr>
+
+    <!-- Card 4: thead & tbody in Tables -->
+    <h2>4. thead & tbody in Tables</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Shradha</td>
+                <td>1664</td>
+            </tr>
+            <tr>
+                <td>Aman</td>
+                <td>1890</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4> thead -> to wrap table head </h4>
+    <h4>tbody -> to wrap table body </h4>
+    <p>Semantic structure = better for CSS & JS</p>
+
+    <hr>
+
+    <!-- Card 5: colspan attribute -->
+    <h2>5. colspan attribute</h2>
+    <p>colspan="n" used to create cells which spans over multiple columns</p>
+    <table>
+        <tr>
+            <th colspan="2">Data</th>
+        </tr>
+        <tr>
+            <td>Shradha</td>
+            <td>1664</td>
+        </tr>
+        <tr>
+            <td>Aman</td>
+            <td>1890</td>
+        </tr>
+    </table>
+    <p>colspan merges columns horizontally</p>
+
+    <hr>
+
+
+
+
+
+
+
+    <!-- Card 10: Class & Id -->
+    <h2>10. Class & Id</h2>
+    <form action="/action.php">
+        <div id="id1" class="group1">
+            ... content ...
+        </div>
+        <div id="id2" class="group1">
+            ... content ...
+        </div>
+    </form>
+    <p>id = unique, 1 element only</p>
+    <p>class = group, multiple elements</p>
+    <p>id = unique identifier, class = reusable group</p>
+
+    <hr>
+
+    <!-- Card 14: iframe Tag -->
+    <h2>14. iframe Tag</h2>
+    <p>website inside website</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=0jvxa3UT5vQceVIg&amp;start=7010"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <iframe width="560" height="315" src="https://en.wikipedia.org/wiki/HTML"> </iframe>
+    <p>iframe embeds external content</p>
+
+    <hr>
+
+    <!-- Card 15: Video Tag -->
+    <h2>15. Video Tag</h2>
+    <video src="03.mp4" controls>My Video</video>
+    <p>Attributes: controls, loop, height, width, autoplay</p>
+    <p>controls attribute shows play/pause buttons</p>
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="background-color: #222; color: white; text-align: center; padding: 12px;">Block vs Inline Elements - Detailed Notes</h1>
+<p style="background-color: #e6f7ff; padding: 8px; border-left: 4px solid blue;"><b>Note:</b> Ham abhi sirf <code>Inline CSS</code> use kar rahe hai taki color se difference samajh aaye. 
+Future me <code>External Stylesheet</code> seekhenge.</p>
+<hr>
+
+<h2 style="color: red; background-color: #ffe6e6; padding: 5px;">PART 1: BLOCK ELEMENTS</h2>
+<p><b>Block ke 3 Funde:</b></p>
+<ul>
+  <li>1. Hamesha <b>nayi line</b> se shuru hote hain</li>
+  <li>2. <b>Puri width</b> lete hain</li>
+  <li>3. <b>Width, Height, Margin, Padding</b> sab lagta hai</li>
+</ul>
+<hr>
+
+<h3 style="color: green;">1. &lt;div&gt; - Generic Container</h3>
+<p><b>Funda:</b> Sabse common block. Iske andar hum poora section banaate hain. Iska koi matlab nahi hota, sirf box banane ke liye.</p>
+<b>Code:</b><pre><code>&lt;div style="background-color: lightgreen; padding: 10px;"&gt;Main ek Div hun&lt;/div&gt;</code></pre> 
+<div style="background-color: lightgreen; padding: 10px; border: 2px solid green;">Main ek Div hun</div>
+<hr>
+
+<h3 style="color: green;">2. &lt;p&gt; - Paragraph</h3>
+<p><b>Funda:</b> Text likhne ke liye. Browser khud upar-neeche thoda gap de deta hai.</p>
+<b>Code:</b><pre><code>&lt;p style="background-color: pink;"&gt;Ye pehla paragraph hai&lt;/p&gt;
+&lt;p style="background-color: pink;"&gt;Ye dusra paragraph hai&lt;/p&gt;</code></pre>
+<p style="background-color: pink; border: 1px solid red; padding: 5px;">Ye pehla paragraph hai</p>
+<p style="background-color: pink; border: 1px solid red; padding: 5px;">Ye dusra paragraph hai - Dekho gap aa gaya</p>
+<hr>
+
+<h3 style="color: green;">3. &lt;h1&gt; to &lt;h6&gt; - Headings</h3>
+<p><b>Funda:</b> Heading dene ke liye. h1 sabse bada, h6 sabse chhota. SEO ke liye important.</p>
+<b>Code:</b><pre><code>&lt;h1 style="background-color: yellow;"&gt;Main H1 hun&lt;/h1&gt;
+&lt;h3 style="background-color: yellow;"&gt;Main H3 hun&lt;/h3&gt;</code></pre>
+<h1 style="background-color: yellow; border: 1px solid orange; margin: 5px 0;">Main H1 hun</h1>
+<h3 style="background-color: yellow; border: 1px solid orange; margin: 5px 0;">Main H3 hun</h3>
+<hr>
+
+<h3 style="color: green;">4. &lt;ul&gt; &amp; &lt;li&gt; - List</h3>
+<p><b>Funda:</b> List banane ke liye. ul = bullet, ol = 1,2,3. li = list ka item</p>
+<b>Code:</b><pre><code>&lt;ul style="background-color: lightblue;"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<ul style="background-color: lightblue; border: 2px solid blue; width: 200px;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+<hr>
+
+<h3 style="color: green;">5. &lt;form&gt; - Form</h3>
+<p><b>Funda:</b> User se data lene ke liye. Input, Button sab iske andar aate hain.</p>
+<b>Code:</b><pre><code>&lt;form style="background-color: #f0f0f0; padding: 10px;"&gt;
+  &lt;input type="text" placeholder="Name"&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<form style="background-color: #f0f0f0; padding: 10px; border: 2px solid grey; width: 300px;">
+  <input type="text" placeholder="Name" style="padding: 5px;">
+  <button style="padding: 5px;">Submit</button>
+</form>
+<p><i><b>Note:</b> <code>header, footer, section, article, table</code> bhi block hain. Ye hum aage detail me seekhenge</i></p>
+<hr>
+
+<h2 style="color: blue; background-color: #e6e6ff; padding: 5px;">PART 2: INLINE ELEMENTS</h2>
+<p><b>Inline ke 3 Funde:</b></p>
+<ul>
+  <li>1. <b>Nayi line nahi</b> lete, bagal me chipak jaate hain</li>
+  <li>2. Sirf <b>content jitni width</b> lete hain</li>
+  <li>3. <b>Width, Height nahi</b> lagta. Sirf Left-Right margin/padding lagta hai</li>
+</ul>
+<hr>
+
+<h3 style="color: purple;">1. &lt;span&gt; - Generic Inline Container</h3>
+<p><b>Funda:</b> Inline ka div. Text ke kisi chhote hisse ko style karne ke liye.</p>
+<b>Code:</b><pre><code>Ye text &lt;span style="background-color: yellow;"&gt;yellow&lt;/span&gt; hai</code></pre>
+Ye text <span style="background-color: yellow; padding: 2px;">yellow</span> hai
+<hr>
+
+<h3 style="color: purple;">2. &lt;a&gt; - Anchor / Link</h3>
+<p><b>Funda:</b> Ek page se dusre page par le jata hai. Sabse important inline tag.</p>
+<b>Code:</b><pre><code>&lt;a href="#" style="background-color: lightblue; padding: 5px;"&gt;Click Me&lt;/a&gt;</code></pre>
+<a href="#" style="background-color: lightblue; padding: 5px; text-decoration: none; color: black;">Click Me</a>
+<hr>
+
+<h3 style="color: purple;">3. &lt;img&gt; - Image</h3>
+<p><b>Funda:</b> Image dikhane ke liye. Ajeeb baat: ye inline hai par isko width/height lagti hai</p>
+<b>Code:</b><pre><code>&lt;img src="https://via.placeholder.com/100" alt="Demo"&gt;</code></pre>
+<img src="https://via.placeholder.com/100" alt="Demo" style="border: 2px solid black;">
+<hr>
+
+<h3 style="color: purple;">4. &lt;strong&gt; &amp; &lt;em&gt; - Bold & Italic</h3>
+<p><b>Funda:</b> strong = important text, bold. em = stressed text, italic. SEO ke liye strong/em use karo, b/i mat karo</p>
+<b>Code:</b><pre><code>Ye &lt;strong&gt;important&lt;/strong&gt; aur ye &lt;em&gt;emphasis&lt;/em&gt; hai</code></pre>
+Ye <strong style="background-color: #ffcccc;">important</strong> aur ye <em style="background-color: #ccffcc;">emphasis</em> hai
+<hr>
+
+<h3 style="color: purple;">5. &lt;input&gt; &amp; &lt;label&gt; - Form Elements</h3>
+<p><b>Funda:</b> User se input lene ke liye. label batata hai ki input kis cheez ka hai</p>
+<b>Code:</b><pre><code>&lt;label&gt;Name:&lt;/label&gt; &lt;input type="text"&gt;</code></pre>
+<label>Name:</label> <input type="text" style="border: 1px solid black;">
+<p><i><b>Note:</b> <code>button, br, small, sub, sup</code> bhi inline hain. Ye hum aage use karte time seekhenge</i></p>
+<hr>
+
+<h3 style="background-color: #444; color: white; padding: 10px; text-align: center;">FINAL COMPARISON TABLE</h3>
+<table border="1" cellpadding="10" style="width: 100%; text-align: center; border-collapse: collapse;">
+    <tr style="background-color: #666; color: white;">
+        <th>Feature</th>
+        <th>Block Element</th>
+        <th>Inline Element</th>
+    </tr>
+    <tr>
+        <td><b>Nayi Line</b></td>
+        <td>✅ Haan</td>
+        <td>❌ Nahi</td>
+    </tr>
+    <tr>
+        <td><b>Width/Height</b></td>
+        <td>✅ Lagti hai</td>
+        <td>❌ Nahi lagti <i>except img</i></td>
+    </tr>
+    <tr>
+        <td><b>Andar kya aa sakta hai</b></td>
+        <td>Block + Inline dono</td>
+        <td>Sirf Inline</td>
+    </tr>
+    <tr>
+        <td><b>Example</b></td>
+        <td>div, p, h1, ul, form</td>
+        <td>span, a, img, strong, input</td>
+    </tr>
+</table>
+<hr> <hr>
+<a href="Comprehensive List.txt">Comprehensive List of Inline & Block Elements</a>
+
+</body>
+</html>

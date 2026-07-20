@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CodeWithHarry Web Dev Notes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #050816;
+            color: #ffffff;
+            margin: 0;
+            padding: 4px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x:hidden;
+            scroll-behavior:smooth;
+        }
+
+        /* Animated Background */
+
+.background{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background:
+
+radial-gradient(circle at top left,#00E5FF33,transparent 30%),
+
+radial-gradient(circle at bottom right,#7C3AED33,transparent 35%),
+
+linear-gradient(135deg,#050816,#0D1117,#0A192F);
+
+z-index:-1;
+
+animation:bgMove 10s infinite alternate;
+
+}
+
+@keyframes bgMove{
+
+0%{
+
+filter:hue-rotate(0deg);
+
+}
+
+100%{
+
+filter:hue-rotate(30deg);
+
+}
+
+}
+
+        h1 {
+            color: #00ffcc;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+            margin-bottom: 30px;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #00ffcc;
+            font-size: 1.1rem;
+        }
+        a:hover {
+            background: #00ffcc;
+            color: #1e1e2f;
+            transform: translateX(10px);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================================================== -->
+    <!-- ANIMATED BACKGROUND -->
+    <!-- ===================================================== -->
+
+    <div class="background"></div>
+
+    <h1>📚 Web Development Learning Portal</h1>
+    
+    <div class="container">
+        <ul>
+            <!-- Aapne jo subfolders banaye hain, unke naam niche badal lijiye -->
+            <li><a href="./1,Introduction to Web dev/index.html" target="_blank">📹 1.Introduction to Web Dev</a></li>
+            <li><a href="./2. HTML Fundamental/index.html" target="_blank">📹 2.HTML Fundamentals</a></li>
+            <li><a href="./3. First HTML Website/index.html" target="_blank">📹 3.First HTML Website</a></li>
+            <li><a href="./4.  Basic HTML Tags/index.html" target="_blank">📹 4.Basic HTML Tags</a></li>
+            <li><a href="./5. HTML Core Elements Reference Guide/index.html" target="_blank">📹 5.HTML Core Elements Reference Guide</a></li>
+            <li><a href="./6. Forms in HTML/index.html" target="_blank">📹 6.Forms in HTML</a></li>
+            <li><a href="./7. SEO & Core Web Vitals/index.html" target="_blank">📹 7.SEO & Core Web Vitals</a></li>
+            <li><a href="./8. Meta Tags Kya hote hain/index.html" target="_blank">📹 8.Meta Tags Kya hote hain</a></li>
+            <li><a href="./9. Inline & Block Elements/index.html" target="_blank">📹 9.Inline & Block Elements</a></li>
+            <!-- Jaise-jaise naye videos aate jayein, yahan naye tags jodte jayein -->
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Forms in HTML</h1>
+    <h2>Form kya hota hai?</h2>
+    <div>
+        <p>
+            Socho tum dukaan me gaye. Dukaandaar tumse naam, number, address maangta
+            hai. Website bhi wahi kaam karti hai. Form ke through wo tumse data
+            maangti hai.
+        </p>
+    </div>
+    <span>
+        <p>Eg- sign up/login/help requests/contact me</p>
+    </span>
+    <hr />
+
+    <!-- 1. Basic Structure of Form -->
+    <h1>1. Basic Structure of Form</h1>
+    <p>
+        Saara khel <code>&lt;form&gt;</code> tag ke andar hota hai. Ye ek dabba
+        banata hai jisme saare sawal hote hain.
+    </p>
+
+    <pre><code>
+&lt;form action="/action.php" method="post"&gt;
+    &lt;!-- form content --&gt;
+&lt;/form&gt;
+    </code></pre>
+
+    <p>
+        <b>Samjho:</b> <br />
+        <b>action="/action.php"</b> = Form bharne ke baad data is file me jayega.
+        Jaise chithi postbox me jaati hai <br />
+        <b>method="post"</b> = Data chhup ke jayega. Password ke liye yehi use
+        karte hain. `get` me data URL me dikh jata hai
+    </p>
+    <hr />
+
+    <!-- 2. Input Tag - Form ka Dil -->
+    <h1>2. Input Tag - Form ka Dil</h1>
+    <p>Form me jo bhi box, button dikhta hai wo sab <code>&lt;input&gt;</code> se banta hai. Iska roop `type` se badalta
+        hai.</p>
+    <h3>Basic Syntax</h3>
+    <pre><code>&lt;form action="/action.php"&gt;
+  &lt;input type="" name="" placeholder=""&gt;
+&lt;/form&gt;
+    </code></pre>
+    <h2>a) <u>Type Attribute</u></h2>
+    <div>
+        <p>HTML mein &lt;input&gt; tag ke saath type attribute ka istemal yeh batane ke liye kiya jata hai ki user se
+            kis tarah ki jaankari (Data) leni hai. Yeh browser ko batata hai ki input field kaisa dikhega. Jaise, kya
+            user ko apna naam type karna hai ya password dalna hai</p>
+    </div>
+    <h3>HTML Input Types - Complete Table</h3>
+    <p>Neeche saare input types aur unka kaam Hinglish me diya gaya hai</p>
+
+    <p><b>Syntax:</b></p>
+    <pre><code>&lt;form action="/action.php" method="post"&gt;
+    &lt;!-- form content --&gt;
+&lt;/form&gt;
+    </code></pre>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Input Type</th>
+            <th>Description - Hinglish me</th>
+            <th> &lt;!-- form content --&gt;</th>
+            <th>Actual Output</th>
+        </tr>
+        <tr>
+            <td><b>text</b></td>
+            <td>Single line ka text box. Naam, address likhne ke liye</td>
+            <td>
+                <pre><code>&lt;input type="text" name="username" 
+placeholder="Enter your Username"&gt;
+        </code></pre>
+            </td>
+            <td>
+                <form action="/action.php" method="post">
+                    <input type="text" name="username" placeholder="Enter your Username">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>password</b></td>
+            <td>Password wala box. Jo likhoge wo ***** ban jayega</td>
+            <td>
+                <pre><code>&lt;input type="password" name="password" 
+placeholder="Password"&gt;</code></pre>
+            </td>
+            <td>
+                <form action="/action.php" method="post">
+                    <input type="password" name="password" placeholder="Password">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>submit</b></td>
+            <td>Form bhejne wala button. Dabate hi data server ko chala jayega</td>
+            <td><code>&lt;input type="submit" value="Submit"&gt;</code></td>
+            <td>
+                <form action="/action.php" method="post">
+                    <input type="submit" value="Submit">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>reset</b></td>
+            <td>Form saaf karne wala button. Sab kuch khali kar deta hai</td>
+            <td><code>&lt;input type="reset" value="Clear"&gt;</code></td>
+            <td>
+                <form action="/action.php" method="post">
+                    <input type="text" name="username" placeholder="Enter your Username">
+                    <input type="password" name="password" placeholder="Password">
+                    <br>
+                    <input type="reset" value="Clear">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>radio</b></td>
+            <td>Gol button. Isme se sirf 1 hi option select kar sakte ho</td>
+            <td>
+                <pre><code>&lt;input type="radio" Value="5th" name="Edu"&gt; 5th
+&lt;input type="radio" Value="8th" name="Edu"&gt; 8th
+&lt;input type="radio" Value="10th" name="Edu"&gt; 10th
+&lt;input type="radio" Value="12th" name="Edu"&gt; 12th
+        </code></pre>
+            </td>
+            <td>
+                <form action="/action.php" method="post">
+                    <input type="radio" Value="8th" name="Edu"> 5th
+                    <input type="radio" Value="10th" name="Edu"> 8th
+                    <input type="radio" Value="12th" name="Edu"> 10th
+                    <input type="radio" Value="Graduate" name="Edu"> 12th
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>checkbox</b></td>
+            <td>Square box. Isme kitne bhi option select kar sakte ho</td>
+            <td>
+                <pre><code>&lt;input type="checkbox" value="Phy" name="Sub"&gt; Phy
+&lt;input type="checkbox" value="Chem" name="Sub"&gt; Chem
+&lt;input type="checkbox" value="Maths" name="Sub"&gt; Maths
+&lt;input type="checkbox" value="Bio" name="Sub"&gt; Bio
+        </code></pre>
+            </td>
+            <td>
+                <form action="/action.php" method="post">
+                    <input type="checkbox" value="Phy" name="Sub"> Phy
+                    <input type="checkbox" value="Chem" name="Sub"> Chem
+                    <input type="checkbox" value="Maths" name="Sub"> Maths
+                    <input type="checkbox" value="Bio" name="Sub"> Bio
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>button</b></td>
+            <td>Normal clickable button. Iska kaam JS se decide hota hai</td>
+            <td><code>&lt;input type="button" value="Click"&gt;</code></td>
+            <td>
+                <form action="/action.php" method="post">
+                    <input type="button" value="Click">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>color</b></td>
+            <td>Color pick karne ka box. Click karte hi color palette khul jayega</td>
+            <td><code>&lt;input type="color" name="color"&gt;</code></td>
+            <td><input type="color" name="color"></td>
+        </tr>
+        <tr>
+            <td><b>date</b></td>
+            <td>Date select karne ke liye calendar khul jata hai</td>
+            <td><code>&lt;input type="date" name="date"&gt;</code></td>
+            <td><input type="date" name="date"></td>
+        </tr>
+        <tr>
+            <td><b>datetime-local</b></td>
+            <td>Date aur Time dono ek saath select karne ke liye</td>
+            <td><code>&lt;input type="datetime-local" name="date & time"&gt;</code></td>
+            <td><input type="datetime-local" name="date & time"></td>
+        </tr>
+        <tr>
+            <td><b>email</b></td>
+            <td>Email likhne ka box. Galat format hoga to error dega</td>
+            <td>
+                <pre><code>&lt;input type="email" name="email" 
+placeholder="abc@mail.com"&gt;
+&lt;input type="submit" value="Submit"&gt;
+            </code></pre>
+            </td>
+            <td>
+                <form action="/action.php" method="post">
+                    <input type="email" name="email" placeholder="abc@mail.com">
+                    <input type="submit" value="Submit">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>file</b></td>
+            <td>Computer se file choose karne ka button. Photo, PDF upload</td>
+            <td><code>&lt;input type="file" name="file"&gt;</code></td>
+            <td><input type="file" name="file"></td>
+        </tr>
+        <tr>
+            <td><b>hidden</b></td>
+            <td>Screen par dikhega nahi, par data chhup ke server ko chala jayega</td>
+            <td><code>&lt;input type="hidden"&gt;</code></td>
+            <td>
+                <form action="/action.php" method="post">
+                    <input type="hidden">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>image</b></td>
+            <td>Photo wala submit button. Photo par click karte hi form submit</td>
+            <td><code>&lt;input type="image" src="submit.png" alt="submit"&gt;</code></td>
+            <td>
+                <form action="/action.php" method="post">
+                    <input type="image" src="submit.png" alt="submit" width="80">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>month</b></td>
+            <td>Sirf Mahina aur Saal select karne ke liye</td>
+            <td><code>&lt;input type="month"&gt;</code></td>
+            <td><input type="month"></td>
+        </tr>
+        <tr>
+            <td><b>number</b></td>
+            <td>Sirf number likhne ka box. Saath me upar-neeche ke teer</td>
+            <td><code>&lt;input type="number"&gt;</code></td>
+            <td><input type="number"></td>
+        </tr>
+        <tr>
+            <td><b>range</b></td>
+            <td>Slider. Isse 1 se 100 ke beech koi number choose kar sakte ho</td>
+            <td><code>&lt;input type="range"&gt;</code></td>
+            <td><input type="range"></td>
+        </tr>
+        <tr>
+            <td><b>search</b></td>
+            <td>Search box. Google jaisa. Saath me clear karne ka X</td>
+            <td><code>&lt;input type="search"&gt;</code></td>
+            <td>
+                <form action="https://www.google.com/search" method="get" target="_blank">
+                    <input type="search" name="q" placeholder="Search...">
+                    <input type="submit" value="Google Search">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>tel</b></td>
+            <td>Phone number likhne ka box. Mobile me iss field ko click karne par number keyboard aa jayega</td>
+            <td><code>&lt;input type="tel"&gt;</code></td>
+            <td><input type="tel" placeholder="9876543210"></td>
+        </tr>
+        <tr>
+            <td><b>time</b></td>
+            <td>Sirf Time select karne ke liye. Ghante aur minute</td>
+            <td><code>&lt;input type="time"&gt;</code></td>
+            <td><input type="time"></td>
+        </tr>
+        <tr>
+            <td><b>url</b></td>
+            <td>Website ka link dalne ka box. url hamesha http:// ya https:// se start hona chaiye warna error aayega
+            </td>
+            <td><code>&lt;input type="url"&gt;</code></td>
+            <td>
+                <form action="https://www.google.com/search" method="get" target="_blank">
+                    <input type="url" name="q" placeholder="https://">
+                    <input type="submit" value="Submit">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><b>week</b></td>
+            <td>Year & Week kaunsa hai wo select karne ke liye</td>
+            <td><code>&lt;input type="week"&gt;</code></td>
+            <td><input type="week"></td>
+        </tr>
+    </table>
+
+    <h3>Ye Table Kyu Important Hai?</h3>
+    <p>
+        1. <b>Ek nazar me sab:</b> Syntax aur Output saath me hai. Code likhne se pehle dekh sakte ho kya banega <br>
+        2. <b>Practice:</b> Interview me poochte hain "range aur number me farak?" Ye table se 2 sec me jawab <br>
+        3. <b>Beginner Friendly:</b> Pehle Description padho, fir Syntax copy karo, fir Output check karo</p>
+
+    <h3>Ye Table Samajhna Kyu Zaroori Hai?</h3>
+    <p>
+        1. <b>Exam + Interview:</b> Forms se har saal sawal aate hain. Ye table 1 baar padh loge to saare type yaad ho
+        jayenge. <br>
+        2. <b>Real Project:</b> Login form banate time `password`, Registration me `date`, `email` chahiye hoga. Bina
+        iske form adhura hai. <br>
+        3. <b>Time Bachata Hai:</b> Har baar Google karne ki zarurat nahi padegi. Saare 22 type ek hi jagah mil gaye.
+        <br>
+        4. <b>Beginner se Advanced:</b> `text` se shuru karke `range`, `datetime-local` jaise advanced type bhi yahi se
+        seekh jaoge.
+    </p>
+
+    <h2>b) <u>Name Attribute</u> </h2>
+    <h3>Name Attribute se 2 bade fayde</h3>
+    <ol>
+        <li><b>Data ko pehchanna:</b> Server ko pata chalta hai ki kaunsa data kis field ka hai. `username=Amit`,
+            `email=abc@gmail.com`</li>
+        <li><b>Radio ko group karna:</b> Same `name` wale radio button me se sirf 1 hi select ho sakta hai</li>
+    </ol>
+    <p><b>Rule:</b> Server hamesha data ko `Name = Value` ke roop mein samajhta hai</p>
+
+
+
+
+    <!-- EXAMPLE 1: Key-Value Pair -->
+    <h4>Example 1: Text Input</h4>
+    <pre><code>&lt;form action="/action.php"&gt;
+  &lt;input type="text" name="username"  placeholder="Enter your Name"&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+    </code></pre>
+    <form action="/action.php" method="post">
+        <input type="text" name="username" placeholder="Enter your Name">
+        <input type="submit" value="Submit">
+    </form>
+    <p><b>Samjhao:</b> Agar user "Amit" likhega to server tak ye jayega <br>
+        <code>username = Amit</code>
+    </p>
+    <h <!-- EXAMPLE 2: Radio Grouping -->
+        <h4>Example 2: Radio Buttons - Group karne ke liye</h4>
+        <pre><code>&lt;form action="/action.php"&gt;
+  &lt;input type="radio" name="gender" value="Male" &gt;Male
+  &lt;input type="radio" name="gender" value="Female"&gt;Female
+&lt;/form&gt;
+   </code></pre>
+        <form action="/action.php" method="post">
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+        </form>
+
+        <p><b>Samjho:</b> Dono ka `name="gender"` same hai isliye sirf 1 hi select hoga <br>
+            Agar Male select kiya to server tak jayega: <code>gender = male</code> <br>
+            Agar Female select kiya to server tak jayega: <code>gender = female</code></p>
+        <p style="color:red;"><b>Note:</b>Value & jo hamne print karaya hai dono Sync main hona chaiye <br>
+            Kyunki, Server ko sirf Value dikhti hai & User ko sirf Print .
+
+            <!-- EXAMPLE 3: Bina name ke -->
+        <h4>Example 3: Bina name ke kya hoga?</h4>
+        <pre><code>&lt;form action="/action.php"&gt;
+  &lt;input type="text" placeholder="Enter your Name"&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+    </code></pre>
+        <form action="/action.php" method="post">
+            <input type="text" placeholder="Enter your Name">
+            <input type="submit" value="Submit">
+        </form>
+
+        <p style="color:red;"><b>Important:</b> Is input me `name` attribute nahi hai. <br>
+            Chahe user kuch bhi likh de, submit karne par ye data server tak nahi pahuchega. Server ise discard kar
+            dega.</p>
+
+
+
+
+
+        </form>
+        <h2>c) <u>Placeholder Attribute</u> </h2>
+        <div>
+            <p>Box ke andar halka hint text. Jaise hi likhna shuru karoge gayab ho jayega</p>
+        </div>
+        <hr>
+
+        <h1>All Input Tags Attributes</h1>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr>
+                <th>Attribute</th>
+                <th>Kam kya karta hai?</th>
+                <th>Example</th>
+                <th>Class 10 wali Example</th>
+            </tr>
+            <tr>
+                <td><b>type</b></td>
+                <td>Ye decide karta hai box kaisa dikhega. Text, password, date, number etc.</td>
+                <td><code>type="email"</code></td>
+                <td>Dukaan me dabbe ka type. Ye chini ka dabba hai ya namak ka</td>
+            </tr>
+            <tr>
+                <td><b>name</b></td>
+                <td>Sabse zaroori. Server isi naam se data ko pehchanta hai. Bina iske data server tak nahi jayega</td>
+                <td><code>name="username"</code></td>
+                <td>Roll number. Teacher isi se copy pehchanti hai</td>
+            </tr>
+            <tr>
+                <td><b>id</b></td>
+                <td>Label ko input se jodne ke liye. `label for="id"` same hona chahiye</td>
+                <td><code>id="emailBox"</code></td>
+                <td>Ghar ka address. Label wala dost isi se ghar dhoondhta hai</td>
+            </tr>
+            <tr>
+                <td><b>placeholder</b></td>
+                <td>Box ke andar halka hint text. Jaise hi likhna shuru karoge gayab ho jayega</td>
+                <td><code>placeholder="Naam likho"</code></td>
+                <td>Notebook par pehle se likha "Yaha naam likho"</td>
+            </tr>
+            <tr>
+                <td><b>value</b></td>
+                <td>2 kaam: 1. Button par kya likha ho 2. Radio/Checkbox me server ko kya data bhejna hai</td>
+                <td>
+                    <pre><code>&lt;input type="button" value="Click"&gt;</code></pre>
+                    <input type="button" value="Click">
+
+                    <pre><code>&lt;input type="radio" name="gender" value="Male" &gt;Male
+  &lt;input type="radio" name="gender" value="Female"&gt;Female</code></pre>
+                    <input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Female">Female
+
+                </td>
+                <td>Button par "click" likhna. Ya MCQ me option A ka answer "Delhi" hai</td>
+            </tr>
+            <tr>
+                <td><b>required</b></td>
+                <td>Ye field bharna compulsory hai. Khali chhodoge to form submit nahi hoga</td>
+                <td>
+                    <pre><code>&lt;input type="text" name="username"  placeholder="Enter your Name" required&gt;
+&lt;input type="text" name="address" placeholder="Address (optional)"&gt;</code></pre>
+                    <form action="/submit.php" method="post">
+                        <input type="text" name="username" placeholder="Enter your Name" required>
+                        <input type="text" name="address" placeholder="Address (optional)">
+                        <input type="submit" value="Submit">
+                    </form>
+                </td>
+                <td>Exam me ye sawal karna zaroori hai. Nahi kiya to number katega</td>
+            </tr>
+            <tr>
+                <td><b>readonly</b></td>
+                <td>User dekh sakta hai par change nahi kar sakta. Data submit ho jayega</td>
+                <td>
+                    <pre><code>&lt;input type="text" id="school" name="school" value="ABC Public School" readonly&gt;</code></pre>
+                    <input type="text" id="school" name="school" value="ABC Public School" readonly>
+                    <input type="submit" value="Submit">
+                </td>
+                <td>School ka naam. Dikhega par pencil nahi chalegi</td>
+            </tr>
+            <tr>
+                <td><b>disabled</b></td>
+                <td>Box bilkul band rahega. Na dekhega, Na change hoga, na jayega server ko</td>
+                <td>
+                    <pre><code>&lt;input type="text" id="rollno" name="rollno" value="101" disabled&gt;</code></pre>
+                    <input type="text" id="rollno" name="rollno" value="101" disabled>
+                </td>
+                <td>Principal ka cabin. Tala laga hai, andar ja bhi nahi sakte</td>
+            </tr>
+            <tr>
+                <td><b>pattern</b></td>
+                <td>Browser khud check kar lega ki data sahi format main hai ya nahi. Jaise sirf 10 digit number ya
+                    specific format</td>
+                <td>
+                    <pre><code>&lt;input type="text" pattern="[0-9]{10}" placeholder="10 digit Mobile No." required&gt; 
+&lt;input type="text" pattern="[0-9]{10}" placeholder="6 digit Pincode" required&gt;</code></pre>
+                    <form action="/submit.php" method="post">
+                        <input type="text" pattern="[0-9]{10}" placeholder="10 digit Mobile No." required>
+                        <input type="submit" value="Check & Submit"><br>
+                        <input type="text" pattern="[0-9]{6}" placeholder="6 digit Pincode" required>
+                        <input type="submit" value="Check & Submit">
+                    </form>
+                </td>
+                <td>Gate par guard. Sirf uniform wale ko andar jaane dega</td>
+            </tr>
+            <tr>
+                <td><b>autofocus</b></td>
+                <td>Page khulte hi cursor apne aap is box me chala jayega</td>
+                <td>
+                    <pre><code>&lt;input type="password" name="password" placeholder="Password" autofocus&gt;</code></pre>
+                    <form action="/submit.php" method="post"></form>
+                    <input type="password" name="password" placeholder="Password">
+                    </form>
+                </td>
+                <td>Class me ghuste hi teacher ka dhyan sabse pehle monitor par</td>
+            </tr>
+        </table>
+        <hr>
+
+        <!-- 3. Label Tag - Dosti wala Tag -->
+        <h1>3. Label Tag - Dosti wala Tag</h1>
+        <p><code>label</code> kaam hai input ko naam dena. Lekin iska sabse bada fayda ye hai:
+            <b>Label par click karoge to bhi input box khud select ho jayega.</b>
+        </p>
+
+        <h2>Kaise kaam karta hai? Jadoo: for = id</h2>
+        <p>Iske liye 2 cheez same honi chahiye: <br>
+            1. <code>label for="kuch"</code> <br>
+            2. <code>input id="kuch"</code> <br>
+        <h3>Note: <code>id</code> kya hoti hai?</h3>
+        <code>id</code> matlab "pehchan patra". Jaise har student ka roll number unique hota hai, waise hi har input ka
+        <code>id</code> unique hona chaiye.</p>
+        <p> Ek page me 2 input ki <code>id</code> same nahi ho sakti. <br>
+            Kaam: Label ko input se jodna. Baad me CSS aur JavaScript bhi isi <code>id</code> se input ko pakadte hain.
+        </p>
+
+        <!-- EXAMPLE 1: TEXT/EMAIL - LABEL UPAR, INPUT NICHE -->
+        <h4>Example 1: Text / Email - Best Practice</h4>
+        <p>Yaha label hamesha upar aata hai. User pehle padhega "kya bharna hai", fir box me type karega.</p>
+        <pre><code>&lt;label for="userEmail"&gt;Email :&lt;/label&gt;
+&lt;input type="email" id="userEmail"&gt;
+</code></pre>
+
+        <!-- LIVE OUTPUT 1 -->
+        <label for="userEmail">Email :</label>
+        <input type="email" id="userEmail">
+        <p><b>Dekh kya hoga:</b> Ab agar tum "Email" wale text par click karoge to cursor apne aap email wale box me
+            chala jayega.</p>
+
+
+        <!-- EXAMPLE 2: RADIO BUTTON - INPUT PEHLE, LABEL BAAD ME -->
+        <h3>Example 2: Radio Button - Sirf 1 option</h3>
+        <p>Yaha gol button pehle aata hai, aur uska naam turant baad me aata hai.</p>
+        <pre><code>&lt;form action="/action.php"&gt;
+  &lt;h5&gt;Select your Class&lt;/h5&gt;
+   &lt;input type="radio" id="class11" name="class" value="xi"&gt;
+   &lt;label for="class11"&gt;Class XI&lt;/label&gt;
+   &lt;br&gt;
+   &lt;input type="radio" id="class12" name="class" value="xii"&gt;
+   &lt;label for="class12"&gt;Class XII&lt;/label&gt;
+&lt;/form&gt;
+</code></pre>
+
+        <!-- LIVE OUTPUT 2 -->
+        <form action="/action.php">
+            <h5>Select your Class</h5>
+            <input type="radio" id="class11" name="class" value="xi">
+            <label for="class11">Class XI</label>
+            <br>
+            <input type="radio" id="class12" name="class" value="xii">
+            <label for="class12">Class XII</label>
+        </form>
+        <p><b>Dekh kya hoga:</b> "Class XI" ya "Class XII" text par click karoge tab bhi gol button select ho jayega.
+            Area bada ho gaya.</p>
+        <hr>
+
+        <!-- EXAMPLE 3: CHECKBOX - INPUT PEHLE, LABEL BAAD ME -->
+        <h3>Example 3: Checkbox - 1 se zyada option</h3>
+        <pre><code>&lt;form action="/action.php"&gt;
+  &lt;h5&gt;Select your Hobbies&lt;/h5&gt;
+    &lt;input type="checkbox" id="cricket" name="hobby" value="cricket"&gt;
+    &lt;label for="cricket"&gt;Cricket&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type="checkbox" id="coding" name="hobby" value="coding"&gt;
+    &lt;label for="coding"&gt;Coding&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type="checkbox" id="music" name="hobby" value="music"&gt;
+    &lt;label for="music"&gt;Music&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type="checkbox" id="travel" name="hobby" value="travel"&gt;
+    &lt;label for="travel"&gt;Travel&lt;/label&gt;
+    &lt;/form&gt;
+</code></pre>
+
+        <!-- LIVE OUTPUT 3 -->
+        <form action="/action.php">
+            <h5>Select your Hobbies</h5>
+            <input type="checkbox" id="cricket" name="hobby" value="cricket">
+            <label for="cricket">Cricket</label>
+            <br>
+            <input type="checkbox" id="coding" name="hobby" value="coding">
+            <label for="coding">Coding</label>
+            <br>
+            <input type="checkbox" id="music" name="hobby" value="music">
+            <label for="music">Music</label>
+            <br>
+            <input type="checkbox" id="travel" name="hobby" value="travel">
+            <label for="travel">Travel</label>
+        </form>
+        <p><b>Dekh kya hoga:</b> Checkbox bahut chote hote hain. Label lagane se "Cricket", "Coding" likhe hue par click
+            karne se bhi tick lag jayega.
+            Mobile user ke liye ye life saver hai.</p>
+        <hr>
+
+        <h3>Pro Tip: Senior Developer wali Best Practice</h3>
+        <ol>
+            <li><b>Text/Email jaise input:</b> <code>Label upar</code> aur <code>Input niche</code> rakho.</li>
+            <li><b>Radio/Checkbox:</b> <code>Input pehle</code> aur <code>Label baad me</code> rakho.</li>
+            <li><b>2 Golden Rules:</b>
+                <ul>
+                    <li>Rule A: Label ka text hamesha <code>&lt;label&gt; ... &lt;/label&gt;</code> ke beech me hi
+                        rahega.</li>
+                    <li>Rule B: Input ko label ke andar mat ghusao. Dono ko alag rakho aur <code>for</code> aur
+                        <code>id</code> se jodo.</li>
+                </ul>
+            </li>
+        </ol>
+        <p>Isse code saaf rehta hai aur baad me CSS se design karna 10x easy ho jata hai.</p>
+
+        <hr>
+
+        <h3>2 aur bade fayde Label ke:</h3>
+        <ol>
+            <li><b>Accessibility:</b> Blind log screen reader use karte hain
+                (screen reader = computer ki awaaz jo screen ka text padh kar sunati hai).
+                <code>label</code> laga hoga to wo bolega "Email edit box".
+            </li>
+            <li><b>Click Area Badi:</b> Radio aur Checkbox ke text par click karne se bhi select ho jayega.</li>
+        </ol>
+
+        <h3>Pro Tip: Screen Reader khud kaise Try karein?</h3>
+        <ul>
+            <li><b>Android:</b> Settings > Accessibility > TalkBack ON karo</li>
+            <li><b>iPhone:</b> Settings > Accessibility > VoiceOver ON karo</li>
+            <li><b>Windows Laptop:</b> <code>Windows + Ctrl + Enter</code> dabao. Narrator chalu</li>
+            <li><b>Mac Laptop:</b> <code>Cmd + F5</code> dabao. VoiceOver chalu</li>
+        </ul>
+
+        <p><b>Rule yaad rakhna:</b> <code>label for</code> = <code>input id</code> <br>
+            Dono ka naam bilkul same hona chahiye. Tabhi dosti chalegi 😄</p>
+        <hr>
+
+
+        <h2>4. Select Tag - Dropdown List</h2>
+        <p>Jab 50 state ho to 50 radio button nahi banayenge. Dropdown banate hain.</p>
+        <!-- CODE -->
+        <pre><code>&lt;form action="/action.php"&gt;
+  &lt;label&gt;Sheher chuno:&lt;/label&gt;
+  &lt;select name="city"&gt;
+     &lt;option value="delhi"&gt;Delhi&lt;/option&gt;
+     &lt;option value="mumbai"&gt;Mumbai&lt;/option&gt;
+     &lt;option value="hyd"&gt;Hyderabad&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt;</code></pre>
+        <!-- LIVE OUTPUT  -->
+        <label>Sheher chuno:</label>
+        <select name="city">
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="hyd">Hyderabad</option>
+        </select>
+
+        <hr>
+
+        <h2>5. Textarea Tag - Bada Box</h2>
+        <p>Address, Feedback, Story likhne ke liye. Kitni bhi line likh sakte ho.</p>
+        <!-- CODE  -->
+        <pre><code>&lt;form action="/action.php"&gt;
+  &lt;textarea name="msg" rows="4" cols="40" placeholder="Yaha likho..."&gt;&lt;/textarea&gt;
+&lt;/form&gt;</code></pre>
+        <!-- LIVE OUTPUT  -->
+
+        <textarea name="feedback" placeholder="Please Give your Feedback" rows="4" cols="40"></textarea>
+
+        <p><b>rows</b> = Kitni line unchi <br> <b>cols</b> = Kitni line chaudi</p>
+        <hr>
+        <hr>
+
+        <a href="FINAL Ultimate HTML Form.html">FINAL Ultimate HTML Form</a>
+</body>
+
+</html>

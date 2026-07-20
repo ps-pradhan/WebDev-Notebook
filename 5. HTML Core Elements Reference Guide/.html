@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forms in HTML - Full Notes</title>
+</head>
+
+<body>
+
+    <h1>Forms in HTML - Zero se Hero</h1>
+    <p><b>Form kya hota hai?</b> Socho tum dukaan me gaye. Dukaandaar tumse naam, number, address maangta hai.
+        Website bhi wahi kaam karti hai. Form ke through wo tumse data maangti hai.</p>
+    <hr>
+
+    <h2>1. Basic Structure of Form </h2>
+    <p>Saara khel <code>&lt;form&gt;</code> tag ke andar hota hai. Ye ek dabba banata hai jisme saare sawal hote hain.
+    </p>
+
+    <pre><code>
+&lt;form action="/action.php" method="post"&gt;
+    &lt;!-- form content --&gt;
+&lt;/form&gt;
+    </code></pre>
+
+
+    <p><b>Samjho:</b> <br>
+        <b>action="/action.php"</b> = Form bharne ke baad data is file me jayega. Jaise chithi postbox me jaati hai <br>
+        <b>method="post"</b> = Data chhup ke jayega. Password ke liye yehi use karte hain. `get` me data URL me dikh
+        jata hai
+    </p>
+    <hr>
+
+    <h2>2. Input Tag - Form ka Dil</h2>
+    <p>Form me jo bhi box, button dikhta hai wo sab <code>&lt;input&gt;</code> se banta hai. Iska roop `type` se badalta
+        hai.</p>
+
+    <h3>a. Common Attributes - Har Input ke liye</h3>
+    <!-- LIVE OUTPUT 2 -->
+    <label for="name">Naam:</label>
+    <input type="text" name="username" id="name" placeholder="Apna naam likho" required>
+    <!-- CODE 2 -->
+    <pre>
+&lt;label for="name"&gt;Naam:&lt;/label&gt;
+&lt;input type="text" name="username" id="name" placeholder="Apna naam likho" required&gt;
+    </pre>
+    <p><b>Samjho ek ek karke:</b> <br>
+        <b>type="text"</b> = Normal likhne wala box <br>
+        <b>name="username"</b> = Sabse zaroori. Jab form submit hoga to server isi naam se data pehchanega. Bina name ke
+        data waste hai <br>
+        <b>id="name"</b> = Label ko is box se jodne ke liye <br>
+        <b>placeholder="Apna naam likho"</b> = Halka text jo hint deta hai. Jaise hi likhoge gayab ho jayega <br>
+        <b>required</b> = Teacher jaisa. Khali chhodoge to form submit hi nahi hone dega
+    </p>
+
+    <h3>b. Input Types - 1 Tag, 100 Kaam</h3>
+    <!-- LIVE OUTPUT 3 -->
+    <p>1. Text: <input type="text" name="name"></p>
+    <p>2. Password: <input type="password" name="pass"></p>
+    <p>3. Email: <input type="email" name="email"></p>
+    <p>4. Number: <input type="number" name="age"></p>
+    <p>5. Date: <input type="date" name="dob"></p>
+    <p>6. File: <input type="file" name="resume"></p>
+    <p>7. Button: <input type="submit" value="Bhejo"> <input type="reset" value="Saaf karo"></p>
+    <!-- CODE 3 -->
+    <pre>
+&lt;p&gt;1. Text: &lt;input type="text" name="name"&gt;&lt;/p&gt;
+&lt;p&gt;2. Password: &lt;input type="password" name="pass"&gt;&lt;/p&gt;
+&lt;p&gt;3. Email: &lt;input type="email" name="email"&gt;&lt;/p&gt;
+&lt;p&gt;4. Number: &lt;input type="number" name="age"&gt;&lt;/p&gt;
+&lt;p&gt;5. Date: &lt;input type="date" name="dob"&gt;&lt;/p&gt;
+&lt;p&gt;6. File: &lt;input type="file" name="resume"&gt;&lt;/p&gt;
+&lt;p&gt;7. Button: &lt;input type="submit" value="Bhejo"&gt; &lt;input type="reset" value="Saaf karo"&gt;&lt;/p&gt;
+    </pre>
+    <p><b>Samjho:</b> <br>
+        <b>password</b> = Jo likho wo ***** ban jata hai <br>
+        <b>email</b> = Galat email likhoge to browser khud bolega "galat hai" <br>
+        <b>number</b> = Sirf number aur upar-neeche ke teer aayenge <br>
+        <b>date</b> = Calendar khul jayega <br>
+        <b>file</b> = Computer se file choose karne ka button <br>
+        <b>submit</b> = Form bhejne wala button. `value` me button par kya likhna hai wo likhte hain <br>
+        <b>reset</b> = Sab saaf karne wala button
+    </p>
+
+    <h3>c. Choice Wale - Radio aur Checkbox</h3>
+    <p><b>Radio</b> = MCQ jisme 1 hi answer. Sabka `name` same rakhna hai</p>
+    <!-- LIVE OUTPUT 4 -->
+    <p>Ling:
+        <input type="radio" name="gender" id="m" value="male">
+        <label for="m">Ladka</label>
+        <input type="radio" name="gender" id="f" value="female">
+        <label for="f">Ladki</label>
+    </p>
+    <!-- CODE 4 -->
+    <pre>
+&lt;input type="radio" name="gender" id="m" value="male"&gt;
+&lt;label for="m"&gt;Ladka&lt;/label&gt;
+&lt;input type="radio" name="gender" id="f" value="female"&gt;
+&lt;label for="f"&gt;Ladki&lt;/label&gt;
+    </pre>
+
+    <p><b>Checkbox</b> = MCQ jisme kitne bhi answer tick kar sakte ho</p>
+    <!-- LIVE OUTPUT 5 -->
+    <p>Subject:
+        <input type="checkbox" name="sub" id="math" value="math">
+        <label for="math">Maths</label>
+        <input type="checkbox" name="sub" id="sci" value="science">
+        <label for="sci">Science</label>
+    </p>
+    <!-- CODE 5 -->
+    <pre>
+&lt;input type="checkbox" name="sub" id="math" value="math"&gt;
+&lt;label for="math"&gt;Maths&lt;/label&gt;
+&lt;input type="checkbox" name="sub" id="sci" value="science"&gt;
+&lt;label for="sci"&gt;Science&lt;/label&gt;
+    </pre>
+    <p><b>value</b> = Ye server ko jata hai. User ko nahi dikhta. Jaise `value="male"` server tak "male" shabd
+        pahunchayega</p>
+    <hr>
+
+    <h2>3. Label Tag - Dosti wala Tag</h2>
+    <p>Label ka kaam hai input ko naam dena. Aur fayda ye ki label par click karoge to bhi box select ho jayega.</p>
+    <!-- LIVE OUTPUT 6 -->
+    <label for="email">Email ID:</label>
+    <input type="email" id="email">
+    <!-- CODE 6 -->
+    <pre>
+&lt;label for="email"&gt;Email ID:&lt;/label&gt;
+&lt;input type="email" id="email"&gt;
+    </pre>
+    <p><b>Rule:</b> `label for` = `input id`. Dono same hone chahiye. Isse blind logon ki help hoti hai.</p>
+    <hr>
+
+    <h2>4. Select Tag - Dropdown List</h2>
+    <p>Jab 50 state ho to 50 radio button nahi banayenge. Dropdown banate hain.</p>
+    <!-- CODE -->
+    <pre><code>&lt;form action="/action.php"&gt;
+  &lt;label&gt;Sheher chuno:&lt;/label&gt;
+  &lt;select name="city"&gt;
+     &lt;option value="delhi"&gt;Delhi&lt;/option&gt;
+     &lt;option value="mumbai"&gt;Mumbai&lt;/option&gt;
+     &lt;option value="hyd"&gt;Hyderabad&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt;</code></pre>
+    <!-- LIVE OUTPUT  -->
+    <label>Sheher chuno:</label>
+    <select name="city">
+        <option value="delhi">Delhi</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="hyd">Hyderabad</option>
+    </select>
+
+    <hr>
+
+    <h2>5. Textarea Tag - Bada Box</h2>
+    <p>Address, Feedback, Story likhne ke liye. Kitni bhi line likh sakte ho.</p>
+    <!-- CODE  -->
+    <pre><code>&lt;label&gt;Feedback:&lt;/label&gt;
+&lt;textarea name="msg" rows="4" cols="40" placeholder="Yaha likho..."&gt;&lt;/textarea&gt;</code></pre>
+    <!-- LIVE OUTPUT  -->
+    <label>Feedback:</label>
+    <textarea name="feedback" rows="4" cols="40" placeholder="Please Give your Feedback"></textarea>
+
+    <p><b>rows</b> = Kitni line unchi <br> <b>cols</b> = Kitni line chaudi</p>
+    <hr>
+
+    <h2>6. Advanced HTML5 Validation - Bina JS ke Check</h2>
+    <p>Browser khud check kar lega ki data sahi hai ya nahi.</p>
+    <!-- LIVE OUTPUT 9 -->
+    <form>
+        <input type="text" pattern="[0-9]{10}" placeholder="10 digit number" required>
+        <input type="submit" value="Check karo">
+    </form>
+    <!-- CODE 9 -->
+    <pre>
+&lt;input type="text" pattern="[0-9]{10}" placeholder="10 digit number" required&gt;
+    </pre>
+    <p><b>Samjho:</b> <br>
+        <b>required</b> = Khali nahi chhod sakte <br>
+        <b>pattern="[0-9]{10}"</b> = Sirf 10 number chalenge. Letter daaloge to error <br>
+        <b>autofocus</b> = Page khulte hi cursor yaha aa jayega
+    </p>
+    <hr>
+
+    <h2>7. Final Mega Form - Sab Kuch Ek Saath</h2>
+    <!-- LIVE OUTPUT 10 -->
+    <form action="/action.php" method="post">
+        <label for="u">Username:</label>
+        <input type="text" name="username" id="u" required>
+        <br><br>
+
+        <label for="p">Password:</label>
+        <input type="password" name="password" id="p" required>
+        <br><br>
+
+        <p>Gender:
+            <input type="radio" name="gender" id="m1" value="male"><label for="m1">Male</label>
+            <input type="radio" name="gender" id="f1" value="female"><label for="f1">Female</label>
+        </p>
+
+        <p>Hobby:
+            <input type="checkbox" name="hobby" id="c" value="cricket"><label for="c">Cricket</label>
+            <input type="checkbox" name="hobby" id="g" value="game"><label for="g">Gaming</label>
+        </p>
+
+        <label>City:</label>
+        <select name="city">
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+        </select>
+        <br><br>
+
+        <label>About:</label>
+        <textarea name="about" rows="3"></textarea>
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+    <!-- CODE 10 -->
+    <pre>
+&lt;form action="/action.php" method="post"&gt;
+    &lt;label for="u"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" name="username" id="u" required&gt;
+    ... pura form ka code ...
+&lt;/form&gt;
+    </pre>
+
+</body>
+
+</html>

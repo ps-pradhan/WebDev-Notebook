@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre><code>&lt;h1&gt;📝 FINAL Ultimate HTML Form &lt;/h1&gt;
+&lt;p&gt;Form = Website ka dukaan wala counter. Yaha se data server tak jata hai&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;form action="/action.php" method="post"&gt;
+
+    &lt;h3&gt;1. Basic Details&lt;/h3&gt;
+    
+    &lt;label for="username"&gt;Username <sup>*Required</sup>&lt;/label&gt;
+    &lt;input type="text" id="username" name="username" placeholder="Enter your Name" required&gt;
+   
+
+    &lt;label for="userpass"&gt;Password:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="password" id="userpass" name="password" placeholder="Password" autofocus&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label for="useremail"&gt;Email *Required:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="email" id="useremail" name="email" placeholder="abc@mail.com" required&gt;
+    &lt;br&gt;&lt;br&gt;
+
+  
+    &lt;label for="userphone"&gt;Phone - Pattern: Sirf 10 digit:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="tel" id="userphone" name="phone" placeholder="9876543210" pattern="[0-9]{10}"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label for="dob"&gt;Date of Birth:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="date" id="dob" name="dob"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;hr&gt;
+
+     &lt;h3&gt;2. Button ka Actual Use Case&lt;/h3&gt;
+    &lt;p&gt;Note: type="button" khud kuch nahi karta. Iske saath JS lagta hai&lt;/p&gt;
+    &lt;input type="button" value="Auto Fill Name" onclick="document.getElementById('username').value='Hello User'"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;h3&gt;3. Pro Attributes - Live Example&lt;/h3&gt;
+    
+    &lt;label for="school"&gt;School Name - Readonly: Dekh sakte, change nahi&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="school" name="school" value="ABC Public School" readonly&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label for="rollno"&gt;Roll No - Disabled: Na dekhega, na jayega server ko&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="rollno" name="rollno" value="101" disabled&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;hr&gt;
+
+    &lt;h3&gt;4. Education - Radio Button&lt;/h3&gt;
+    &lt;input type="radio" id="8th" name="Edu" value="8th"&gt;
+    &lt;label for="8th"&gt;8th&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type="radio" id="10th" name="Edu" value="10th"&gt;
+    &lt;label for="10th"&gt;10th&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type="radio" id="12th" name="Edu" value="12th"&gt;
+    &lt;label for="12th"&gt;12th&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type="radio" id="graduate" name="Edu" value="Graduate"&gt;
+    &lt;label for="graduate"&gt;Graduate&lt;/label&gt;
+
+    &lt;hr&gt;
+
+    &lt;h3&gt;5. Subjects - Checkbox&lt;/h3&gt;
+    &lt;input type="checkbox" id="phy" name="Sub" value="Phy"&gt;
+    &lt;label for="phy"&gt;Phy&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type="checkbox" id="chem" name="Sub" value="Chem"&gt;
+    &lt;label for="chem"&gt;Chem&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type="checkbox" id="maths" name="Sub" value="Maths"&gt;
+    &lt;label for="maths"&gt;Maths&lt;/label&gt;
+    &lt;br&gt;
+    &lt;input type="checkbox" id="bio" name="Sub" value="Bio"&gt;
+    &lt;label for="bio"&gt;Bio&lt;/label&gt;
+
+    &lt;hr&gt;
+
+    &lt;h3&gt;6. City - Select Tag&lt;/h3&gt;
+    &lt;label for="city"&gt;Sheher chuno:&lt;/label&gt;&lt;br&gt;
+    &lt;select id="city" name="city"&gt;
+        &lt;option value=""&gt;-- City Chuno --&lt;/option&gt;
+        &lt;option value="delhi"&gt;Delhi&lt;/option&gt;
+        &lt;option value="mumbai"&gt;Mumbai&lt;/option&gt;
+        &lt;option value="hyd"&gt;Hyderabad&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;hr&gt;
+
+    &lt;h3&gt;7. Feedback - Textarea&lt;/h3&gt;
+    &lt;label for="msg"&gt;Please Give your Feedback&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="msg" name="msg" rows="4" cols="40" placeholder="Yaha likho..."&gt;&lt;/textarea&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;hr&gt;
+
+    &lt;h3&gt;8. Other Input Types&lt;/h3&gt;
+    &lt;label for="color"&gt;Favorite Color:&lt;/label&gt;
+    &lt;input type="color" id="color" name="color"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label for="range"&gt;Rate 1 to 100:&lt;/label&gt;
+    &lt;input type="range" id="range" name="range"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label for="file"&gt;Upload File:&lt;/label&gt;
+    &lt;input type="file" id="file" name="file"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;hr&gt;
+
+    &lt;h3&gt;9. 4 Pro Attributes - Revision Table&lt;/h3&gt;
+    &lt;table border="1" cellpadding="8"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Attribute&lt;/th&gt;
+            &lt;th&gt;Kaam&lt;/th&gt;
+            &lt;th&gt;Server ko data jayega?&lt;/th&gt;
+            &lt;th&gt;User change kar sakta?&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;required&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Bharna compulsory hai. Khali chhodoge to error&lt;/td&gt;
+            &lt;td&gt;Haan&lt;/td&gt;
+            &lt;td&gt;Haan&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;readonly&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Sirf dekh sakte ho. Pencil nahi chalegi&lt;/td&gt;
+            &lt;td&gt;Haan&lt;/td&gt;
+            &lt;td&gt;Nahi&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;disabled&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Box band hai. Tala laga hai&lt;/td&gt;
+            &lt;td&gt;Nahi&lt;/td&gt;
+            &lt;td&gt;Nahi&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;pattern="[0-9]{10}"&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Guard hai. Sirf 10 digit number lega&lt;/td&gt;
+            &lt;td&gt;Haan, agar sahi hai to&lt;/td&gt;
+            &lt;td&gt;Haan&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;hr&gt;
+
+    &lt;input type="checkbox" id="terms" name="terms" required&gt;
+    &lt;label for="terms"&gt;I agree to Terms and Conditions *Required&lt;/label&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+    &lt;input type="reset" value="Clear"&gt;
+
+&lt;/form&gt;</code></pre>
+</body>
+</html>

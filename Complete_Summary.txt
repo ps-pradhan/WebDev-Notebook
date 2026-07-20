@@ -1,0 +1,64 @@
+Day 1 Date 15 July 2026 se Sigma web Development Course start kar Raha hun
+
+1. Installing VS Code , How Websites Work:
+   a) Sir ne VS CODE install karna sikhaya & folder kaise banate hai bataya
+   b) index.html file banaya jisme ham HTML code likhenge. 
+   c) Boilerplate code kaise likhte hai HTML main ?
+   c) Clients, Browsers, Server kya hota hai ? 
+   d) HTML, CSS, Javascript ka basic matlab kya hai ?
+   e) Agar CSS na ho website main toh kya hoga ?
+
+      & iss Tarah Video 1 Khatam hua 
+
+2. First HTML Website banaya :
+    a)How to link CSS & Javascript in HTML?
+    b)Live Preview extenstion install karke apna first website preview kiya.
+
+3. HTML Fundamental.
+    a) Boilerplate code ke har line ka matlab.
+    b) HTML tag is parent of head & body
+    c) Some HTML Fundamental.
+
+4. HTML Tags ka Khandaan
+   a)isme ham 11 Most Important basic HTML Tags padhe hain.
+   b) The Tags are :
+      1.HTML Attribute, 2.Heading Tag , 3.Paragraph Tag, 4.Anchor Tag, 5.image Tag,
+      6.br Tag, 7. (Bold, Italic, Underline Tags), 8.(Big & Small Tags), 9.Hr tag
+      10.(Subscript & Superscript Tags), 11.Pre Tag
+
+Day 2 Date 16 July 2026
+
+5. HTML Core Elements Reference Guide
+    a)Isme Ham sare remaining Core Elements Tags Sikhe 
+    b)Core Elements Tags are:
+      1.List 
+      2.Table in HTML, Caption in Table ,thead & tbody in tables, Colspan & Rowspan Attribute     
+      3. Classes & Id's
+      4. Media Tags : - iframe tag, Video Tag, Audio Tag 
+
+6. Forms in HTML
+    a) Isme Ham pura Form kaise banate hai sikhe
+    b)action & method kya hota hai 
+    c) get & Post ka difference. 
+    b) Input Tag
+    c)all Input Types jaise - text, password, Submit, reset, radio, checkbox, button, color, date, datetime-local, email, file, hidden, image, month, number, range, search, tel, time, url, week. 
+    d) all Input attribute jaise - type, name, value, Placeholder, id, required, readonly, disabled, pattern,  Autofocus
+    e)Label Tag, Select Tag, Textarea Tag
+    f) Final Ultimate HTML Form & source code
+
+7. SEO & Core Web Vitals 
+    a) What is SEO ? SEO ka main goal kya hai?
+    b) What is Core Web Vitals ?
+    c)Core Web Vitals 3 cheezon par based hote hain:
+        1.Loading Speed : (LCP - Largest Contentful Paint)
+        2.Responsiveness : (INP - Interaction to Next Paint)
+        3.Visual Stability : (CLS - Cumulative Layout Shift)
+    d) What is Lighthouse Report & How to generate it?
+
+8.  Meta Tags kya hote hain
+   a)Definition & Sabse Important Meta Tags 
+   b)Meta Tags SEO me kaise Help Karti Hain?
+   c) 3 Golden Rules Hamesha yaad rakhna
+      Rule 1: Har page ka Title aur Description alag hona chahiye. Copy paste mat karna
+      Rule 2: Keyword stuffing mat karo: data, data, data aise likhne se Google ban karega
+      Rule 3: Mobile First socho: viewport tag har website me pehle din lagana hai

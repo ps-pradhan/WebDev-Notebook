@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Video, Audio, SVG & iFrame</title>
+    <style>
+        /* NEON ANIMATED BACKGROUND */
+        body {
+            font-family: 'Segoe UI';
+            color: #e6edf3;
+            padding: 40px 20px;
+            margin: 0;
+            background: #000;
+            overflow-x: hidden;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, #00f5ff 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, #ff00ff 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, #00ff88 0%, transparent 50%);
+            filter: blur(80px);
+            animation: neonMove 15s infinite alternate;
+            z-index: -1;
+        }
+        @keyframes neonMove {
+            0% { transform: rotate(0deg) scale(1); }
+            100% { transform: rotate(360deg) scale(1.2); }
+        }
+
+        .container { max-width: 950px; margin: auto; position: relative; z-index: 1; }
+        h1 { 
+            color: #00f5ff; 
+            text-align: center; 
+            margin-bottom: 40px; 
+            font-size: 2.8em;
+            text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff;
+        }
+
+        .section { 
+            background: rgba(22, 27, 34, 0.7); 
+            backdrop-filter: blur(10px);
+            padding: 25px; 
+            margin-bottom: 25px; 
+            border-radius: 12px; 
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.1);
+        }
+        .section h2 { color: #00f5ff; margin-bottom: 12px; text-shadow: 0 0 8px #00f5ff; }
+        .desc { margin-bottom: 20px; color: #b1bac4; line-height: 1.7; }
+        .desc b { color: #ff00ff; }
+
+        /* VS CODE STYLE SYNTAX HIGHLIGHTING */
+        .code-block { 
+            background: #1e1e1e; 
+            padding: 15px; 
+            border-radius: 8px; 
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .tag { color: #569cd6; }
+        .attr { color: #9cdcfe; }
+        .val { color: #ce9178; }
+        .comment { color: #6a9955; }
+
+        .grid { display: flex; gap: 20px; flex-wrap: wrap; }
+        .col { flex: 1; min-width: 300px; }
+
+        .result { 
+            background: rgba(13, 17, 23, 0.8); 
+            border: 1px dashed #ff00ff; 
+            padding: 15px; 
+            border-radius: 8px;
+        }
+        .result h4 { color: #ff00ff; margin-bottom: 10px; }
+
+        .summary { 
+            background: rgba(22, 27, 34, 0.7); 
+            backdrop-filter: blur(10px);
+            padding: 25px; 
+            border-radius: 12px; 
+            border: 1px solid rgba(255, 0, 255, 0.3);
+        }
+        .summary h2 { color: #ff00ff; margin-bottom: 15px; }
+        .summary table { width: 100%; border-collapse: collapse; }
+        .summary td { padding: 10px; border-bottom: 1px solid rgba(48, 54, 61, 0.5); }
+        .summary td:first-child { color: #00f5ff; width: 120px; font-weight: bold; }
+        .warning { background: rgba(255, 0, 0, 0.1); border-left: 3px solid #da3633; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Media Tags</h1>
+
+        <!-- 1. VIDEO TAG -->
+        <div class="section">
+            <h2>1. &lt;video&gt; Tag</h2>
+            <p class="desc">Website me video embed karne ke liye. Apna player mil jata hai.</p>
+            <div class="grid">
+                <div class="col">
+                    <div class="code-block">
+                        <span class="tag">&lt;video</span> 
+  <span class="attr">src</span>=<span class="val">"video.mp4"</span> 
+  <span class="attr">controls</span> 
+  <span class="attr">width</span>=<span class="val">"400"</span> 
+  <span class="attr">height</span>=<span class="val">"225"</span><span class="tag">&gt;&lt;/video&gt;</span>
+                    </div>
+                    <p class="desc">
+                        <b>src</b> = video ka path <br>
+                        <b>controls</b> = play/pause button <br>
+                        <b>width / height</b> = video ka size set karne ke liye. <br>
+                        <b>autoplay</b> = khud chalu <br>
+                        <b>loop</b> = repeat <br>
+                        <b>muted</b> = bina sound <br>
+                        <b>poster</b> = video se pehle thumbnail
+                    </p>
+                </div>
+                <div class="col">
+                    <div class="result">
+                        <h4>OUTPUT</h4>
+                        <video src="video.mp4" controls width="100%" height="200" poster="https://via.placeholder.com/400x200/00f5ff/000?text=Video"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. AUDIO TAG -->
+        <div class="section">
+            <h2>2. &lt;audio&gt; Tag</h2>
+            <p class="desc">Website me audio/gaana play karne ke liye.</p>
+            <div class="grid">
+                <div class="col">
+                    <div class="code-block">
+                        <span class="tag">&lt;audio</span> <span class="attr">src</span>=<span class="val">"audio.mp3"</span> <span class="attr">controls</span><span class="tag">&gt;&lt;/audio&gt;</span>
+                    </div>
+                    <p class="desc">
+                        <b>controls</b> = play/pause/volume <br>
+                        <b>autoplay</b> = khud chalu <br>
+                        <b>loop</b> = repeat
+                    </p>
+                    <h4 style="color:#ff00ff; margin-top:15px;">Interview Q: preload kya hai?</h4>
+                    <p class="desc">
+                        Ye batata hai page load hote time audio kitna load karna hai.
+                        <br><b>1. preload="none"</b> = Kuch mat load karo. User click kare tabhi load hoga. Data bachata hai.
+                        <br><b>2. preload="metadata"</b> = Sirf duration aur info load karo. Fast hota hai.
+                        <br><b>3. preload="auto"</b> = Pura audio background me load karo. Turant play hoga.
+                    </p>
+                </div>
+                <div class="col">
+                    <div class="result">
+                        <h4>OUTPUT</h4>
+                        <audio src="audio.mp3" controls style="width:100%;"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. SVG TAG -->
+        <div class="section">
+            <h2>3. SVG in HTML</h2>
+            <p class="desc">Scalable Vector Graphics. Kitna bhi zoom karo quality kharab nahi hogi.</p>
+            <div class="grid">
+                <div class="col">
+                    <h4 style="color:#ff00ff;">Method 1: Inline SVG</h4>
+                    <div class="code-block">
+                        <span class="tag">&lt;svg</span> <span class="attr">width</span>=<span class="val">"100"</span> <span class="attr">height</span>=<span class="val">"100"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;circle</span> <span class="attr">cx</span>=<span class="val">"50"</span> <span class="attr">cy</span>=<span class="val">"50"</span> <span class="attr">r</span>=<span class="val">"40"</span> <span class="attr">fill</span>=<span class="val">"red"</span><span class="tag">/&gt;</span>
+<span class="tag">&lt;/svg&gt;</span>
+                    </div>
+                    <h4 style="color:#ff00ff; margin-top:15px;">Method 2: IMG Tag se</h4>
+                    <div class="code-block">
+                        <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"logo.svg"</span> <span class="attr">alt</span>=<span class="val">"Logo"</span><span class="tag">&gt;</span>
+                    </div>
+                    <div class="warning">
+                        <b>Important Interview Note:</b> Agar `logo.svg` alag file hai toh us file ke andar sabse upar ye line honi chahiye: 
+                        <br><code class="comment">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code>
+                        <br>Warna browser me error aayega ya image load nahi hogi.
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="result">
+                        <h4>OUTPUT</h4>
+                        <svg width="100" height="100">
+                            <circle cx="50" cy="50" r="40" stroke="#00f5ff" stroke-width="3" fill="#ff00ff" />
+                        </svg>
+                        <p style="margin-top:10px;">Ye circle Inline SVG se bana hai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. IFRAME TAG -->
+        <div class="section">
+            <h2>4. &lt;iframe&gt; Tag</h2>
+            <p class="desc">Ek website ke andar dusri website embed karne ke liye. Jaise YouTube video, Google Map.</p>
+            <div class="grid">
+                <div class="col">
+                    <div class="code-block">
+                        <span class="tag">&lt;iframe</span> 
+  <span class="attr">src</span>=<span class="val">"https://youtube.com/embed/VIDEO_ID"</span> 
+  <span class="attr">width</span>=<span class="val">"400"</span> 
+  <span class="attr">height</span>=<span class="val">"225"</span><span class="tag">&gt;&lt;/iframe&gt;</span>
+                    </div>
+                    <p class="desc">
+                        <b>src</b> = jis page ko embed karna hai <br>
+                        <b>width/height</b> = size <br>
+                        <b>frameborder</b> = border hatane ke liye 0
+                    </p>
+                </div>
+                <div class="col">
+                    <div class="result">
+                        <h4>OUTPUT</h4>
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="summary">
+            <h2>Quick Summary</h2>
+            <table>
+                <tr><td><code>&lt;video&gt;</code></td><td>Video + controls, width, height, poster</td></tr>
+                <tr><td><code>&lt;audio&gt;</code></td><td>Audio + controls. preload interview ke liye</td></tr>
+                <tr><td><code>&lt;svg&gt;</code></td><td>Scalable graphics. IMG se use karne pe XML header jaruri</td></tr>
+                <tr><td><code>&lt;iframe&gt;</code></td><td>Bahari website embed</td></tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

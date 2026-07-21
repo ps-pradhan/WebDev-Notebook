@@ -5,10 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Tags ka Khandaan</title>
     
-<link rel="stylesheet" href="style.css">
+    <style>
+        /* RETRO 80s TERMINAL THEME */
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+
+        body {
+            background-color: #0d0d0d;
+            background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            color: #00ff41;
+            font-family: 'Source Code Pro', monospace;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            border: 1px solid #00ff41;
+            padding: 30px;
+            box-shadow: 0 0 15px #00ff41;
+        }
+
+        h1 { /* Main Heading */
+            color: #00ff41;
+            text-align: center;
+            font-size: 2.5em;
+            text-shadow: 0 0 5px #00ff41;
+            border-bottom: 1px dashed #00ff41;
+            padding-bottom: 15px;
+        }
+
+        h2 { /* Section Heading */
+            color: #ff00ff;
+            margin-top: 40px;
+            font-size: 1.8em;
+            text-shadow: 0 0 5px #ff00ff;
+        }
+        
+        h3 { /* Sub Heading */
+            color: #00ffff;
+        }
+
+        h4, h5, h6 { /* Baaki headings */
+            color: #ffff00;
+        }
+
+        /* DEMO KE LIYE - SAB SAME COLOR */
+        .demo-heading {
+            color: #00ff41 !important;
+            text-shadow: 0 0 5px #00ff41;
+            margin: 5px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #00ff41;
+            border-radius: 4px;
+            margin: 15px 0;
+            display: block;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px dashed #00ff41;
+            margin: 30px 0;
+        }
+
+        a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff00ff;
+            text-decoration: underline;
+        }
+
+        pre {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 15px;
+            border: 1px solid #00ff41;
+            border-radius: 4px;
+            overflow-x: auto;
+            color: #00ff41;
+        }
+
+        b { color: #ffff00; }
+        i { color: #00ffff; }
+        u { color: #ff00ff; text-decoration: underline; }
+        big { color: #ffff00; font-size: 1.2em; }
+        small { color: #a0a0a0; }
+
+    </style>
 </head>
 <!--  Body Tag -->
 <body>
+<div class="container">
   <h1>Basic HTML Tags</h1>
   <img height="500" src="HTML Element & Attribute.png" alt="HTML Element & Attribute">
   <br>
@@ -16,15 +109,14 @@
 <!--  Heading Tag -->
   <h2>1. Heading Tag</h2>
   <img width="600" src="Heading Tag.png" alt="Heading Tag">
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
+    <h1 class="demo-heading">Heading 1</h1>
+    <h2 class="demo-heading">Heading 2</h2>
+    <h3 class="demo-heading">Heading 3</h3>
+    <h4 class="demo-heading">Heading 4</h4>
+    <h5 class="demo-heading">Heading 5</h5>
+    <h6 class="demo-heading">Heading 6</h6>
     <br>
     <hr>
-
 
 <!-- paragraph Tag -->
  <h2>2. Paragraph Tag</h2>
@@ -169,5 +261,6 @@
     tag
     </pre>
     <hr>
+</div>
 </body>
-</html>
+  </html>

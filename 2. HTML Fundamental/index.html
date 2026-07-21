@@ -1,27 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Fundamental</title>
+    <title>HTML Fundamental | PSP.Tech</title>
+    <style>
+        /* MINIMAL PRO THEME */
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: #f7fafc;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: #1a202c;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        .main-img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+
+        .section {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #2b6cb0;
+            font-size: 1.6em;
+            margin-top: 0;
+            border-bottom: 2px solid #ebf8ff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* CODE BLOCK */
+        .code-wrapper {
+            background: #1a202c;
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+        .code-wrapper pre {
+            margin: 0;
+            color: #e2e8f0;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        .code-tag { color: #63b3ed; }
+        .code-attr { color: #f6ad55; }
+        .code-val { color: #9ae6b4; }
+        .code-comment { color: #a0aec0; font-style: italic; }
+
+        .note {
+            background: #ebf8ff;
+            border-left: 4px solid #2b6cb0;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+            color: #2c5282;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 40px 0;
+        }
+    </style>
 </head>
 <body>
-    <img width = 800 src="HTML Fundamental.png" alt="HTML Fundamental">
-    <hr>
-   <!-- HTML Boilerplate Code  -->
-    <h1>This is HTML Boilerplate Code</h1>
-    <pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- Content goes here  --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-    </code></pre>
+    <div class="container">
+        <header>
+            <h1>HTML Fundamental</h1>
+            <p>Website ki neev yahi se shuru hoti hai</p>
+        </header>
+
+        <img class="main-img" src="HTML Fundamental.png" alt="HTML Fundamental Diagram">
+
+        <div class="section">
+            <h2>HTML Boilerplate Code kya hai?</h2>
+            <p>
+                Jab bhi hum nayi HTML file banate hain, toh ye basic structure likhna padta hai. 
+                Ise hi <b>Boilerplate Code</b> bolte hain. Soch lo ye website ka "template" hai.
+            </p>
+            
+            <div class="code-wrapper">
+<pre><code><span class="code-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="code-tag">&lt;html</span> <span class="code-attr">lang</span>=<span class="code-val">"en"</span><span class="code-tag">&gt;</span>
+<span class="code-tag">&lt;head&gt;</span>
+    <span class="code-tag">&lt;meta</span> <span class="code-attr">charset</span>=<span class="code-val">"UTF-8"</span><span class="code-tag">&gt;</span>
+    <span class="code-tag">&lt;meta</span> <span class="code-attr">name</span>=<span class="code-val">"viewport"</span> <span class="code-attr">content</span>=<span class="code-val">"width=device-width, initial-scale=1.0"</span><span class="code-tag">&gt;</span>
+    <span class="code-tag">&lt;title&gt;</span>Document<span class="code-tag">&lt;/title&gt;</span>
+<span class="code-tag">&lt;/head&gt;</span>
+<span class="code-tag">&lt;body&gt;</span>
+    <span class="code-comment">&lt;!-- Yaha apna saara content aayega  --&gt;</span>
+<span class="code-tag">&lt;/body&gt;</span>
+<span class="code-tag">&lt;/html&gt;</span></code></pre>
+            </div>
+
+            <div class="note">
+                <b>Samjho aise:</b> <br>
+                <b>`!DOCTYPE`</b> = Browser ko batata hai ye HTML5 hai <br>
+                <b>`head`</b> = Website ki settings yaha hoti hain <br>
+                <b>`body`</b> = Jo user ko dikhega wo sab yaha likhte hain
+            </div>
+        </div>
+
+    </div>
 </body>
-</html>
+  </html>

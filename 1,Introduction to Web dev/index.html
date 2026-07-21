@@ -2,48 +2,137 @@
       
                     
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Introduction Notes | PSP.Tech</title>
+    <style>
+        /* TRENDY GRADIENT BACKGROUND */
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: rgba(255,255,255,0.7);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 2.8em;
+            color: #d53f8c;
+            margin: 0;
+        }
+        header p {
+            color: #4a5568;
+            font-size: 1.1em;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-left: 5px solid #ed64a6;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .card h2 {
+            color: #ed64a6;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+
+        .card p, .card li {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+        .card b { color: #d53f8c; }
+        .card u { color: #d53f8c; text-decoration: none; border-bottom: 2px dashed #fbb6ce; }
+
+        .card img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        ol, ul {
+            padding-left: 20px;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #fbb6ce, transparent);
+            margin: 25px 0;
+        }
+    </style>
 </head>
 <body>
 
-    <h1> Introduction to Web Development</h1>
-    <hr>
-    <img width="700" src="How Client, Browser & Server Works.png" alt="">
-    <hr>
-    <h2> 1. Installing VS Code</h2>
-    <ol>
-        <li>We can use any text editor of our choice.</li>
-        <li>Here I am using VS Code because it is light weight, opensource & from Microsoft.</li>
-        <li><b>Go to google, type VS Code & install it</b></li>
-    </ol>
-    <p><u>Note :</u> You can write HTML even in Notepad. Text editors like VS Code just makes these things easier</p>
-    <hr>
+    <div class="wrapper">
+        <header>
+            <h1>Web Development ki Shuruat</h1>
+            <p>PSP.Tech | HTML Notes Series</p>
+        </header>
 
-    
-    <h2>2. What is HTML?</h2>
-    <p><b>HTML → Hyper Text Markup Language</b></p>
-    <ul>
-        <li>HTML is the language of the web. It is used to create websites</li>
-        <li>We use HTML tags to define look & feel of a website</li>
-        <li>With understanding of these tags and How to put them together, we can create beautiful websites easily!</li>
-    </ul>
-    <hr>
-    
-    <h2>3.Then Why we use CSS & JavaScript also ?</h2>
-    <p>Website banane ke liye 3 cheez chahiye:</p>
-    <ol>
-        <li><b>HTML</b> - defining layout of a page - A barebone page structure</li>
-        <li><b>CSS</b> - add styling to that barebone page created using HTML</li>
-        <li><b>JavaScript</b> - program logic for the page layout eg. what happens when a user hovers on a text, when to hide or show elements etc.</li>
-    </ol>
-    <img width="700" src="Frontend ke 3 Stambh.png" alt="HTML Vs CSS Vs JavaScript">
-    <hr>
+        <div class="card">
+            <img src="How Client, Browser & Server Works.png" alt="Client Browser Server kaise kaam karta hai">
+        </div>
 
-    
+        <div class="card">
+            <h2>1. VS Code Install Kaise Karein</h2>
+            <ol>
+                <li>Hum koi bhi text editor use kar sakte hain.</li>
+                <li>Main yaha VS Code use kar raha hu kyunki ye halka hai, free hai aur Microsoft ka hai.</li>
+                <li><b>Google pe jao, "VS Code" search karo aur install kar lo</b></li>
+            </ol>
+            <p><u>Note :</u> Tum HTML Notepad me bhi likh sakte ho. VS Code jaise editors se kaam easy ho jata hai bas.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. HTML hota kya hai?</h2>
+            <p><b>HTML → Hyper Text Markup Language</b></p>
+            <ul>
+                <li>HTML website banane ki bhasha hai. Isse hum websites banate hain</li>
+                <li>Hum HTML tags ka use karke website ka look aur structure banate hain</li>
+                <li>In tags ko samajh kar aur saath me jod kar hum aasani se sundar websites bana sakte hain!</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>3. Toh CSS aur JavaScript ki kya jarurat hai?</h2>
+            <p>Ek website banane ke liye 3 cheezein chahiye hoti hain:</p>
+            <ol>
+                <li><b>HTML</b> - Page ka skeleton / structure banata hai - Haddi</li>
+                <li><b>CSS</b> - Uss skeleton ko sundar banata hai - Kapde aur makeup</li>
+                <li><b>JavaScript</b> - Page me jaan dalta hai - Kaam karwata hai. Jaise button pe click kiya toh kya hoga</li>
+            </ol>
+            <img src="Frontend ke 3 Stambh.png" alt="HTML Vs CSS Vs JavaScript">
+        </div>
+
+    </div>
 
 </body>
 </html>

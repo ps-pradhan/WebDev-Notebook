@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 ke Superhero Tags</title>
+</head>
+
+<body>
+    <h1>HTML5 ke Superhero Tags: Semantic Tags</h1>
+
+    <h2>Scene 1: Problem - Jab Sab Kuch "Dabba" Tha</h2>
+    <p>Maan lo tum naye ghar me shift hue. Saare dabbe pe kuch likha hi nahi hai.</p>
+    <p>1 dabbe me bartan, 1 me kapde, 1 me books. Par upar sab pe likha hai "Saman".</p>
+    <p>Ab mummy bolegi "beta kitab wala dabba dena". Tum 1 ghante tak sab dabbe khologe. Takleef hui na?</p>
+
+    <p>Bilkul aise hi pehle HTML tha. Developer har cheez ko <code>&lt;div&gt;</code> naam ke dabbe me daal deta tha.
+    </p>
+    <p>Header bhi div, Footer bhi div, Menu bhi div. Browser bechara har baar saare dabbe khol kar dekhta tha "is dabbe
+        me kya hai?"</p>
+
+    <h2>Scene 2: Entry - HTML5 ke Superhero</h2>
+    <p>Phir HTML5 ke superhero aaye aur bole "bas ab aur nahi".</p>
+    <p>Unhone har dabbe pe naam likh diya.
+        Ab kitab wale dabbe pe "Kitab", bartan wale pe "Bartan".</p>
+    <p>Header ka naam <code>&lt;header&gt;</code>, Menu ka naam <code>&lt;nav&gt;</code>, Article ka naam
+        <code>&lt;article&gt;</code></p>
+    <p>Inhi naam wale dabbo ko hum <b>Semantic Tags</b> bolte hain.
+        "Semantic" = "Jiska matlab ho"</p>
+    <p>Ab browser ko 1 second me pata chal jata hai "acha ye header hai, ye main content hai"</p>
+
+    <h2>Scene 3: Full Movie - 1 Website, Saare Superhero Ek Saath</h2>
+    <p>Chalo ab "CodeWithBhai" naam ki website banate hain. Aur isme saare superhero tags ko kaam pe lagate hain. Dhyan
+        se dekho:</p>
+
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;CodeWithBhai Blog&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Superhero 1: HEADER --&gt;
+    &lt;header&gt;
+        &lt;h1&gt;CodeWithBhai&lt;/h1&gt;
+        &lt;p&gt;HTML seekho, Maza ke saath&lt;/p&gt;
+        
+        &lt;!-- Superhero 2: NAV --&gt;
+        &lt;nav&gt;
+            &lt;a href="#"&gt;Home&lt;/a&gt; | 
+            &lt;a href="#"&gt;Courses&lt;/a&gt; | 
+            &lt;a href="#"&gt;About&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;!-- Superhero 3: MAIN --&gt;
+    &lt;main&gt;
+
+        &lt;!-- Superhero 4: ARTICLE --&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Semantic Tags kya hote hain?&lt;/h2&gt;
+            &lt;p&gt;Published on: &lt;time datetime="2026-07-22"&gt;22 July 2026&lt;/time&gt;&lt;/p&gt;
+            
+            &lt;!-- Superhero 5: SECTION --&gt;
+            &lt;section&gt;
+                &lt;h3&gt;Part 1: Pehle Problem kya thi?&lt;/h3&gt;
+                &lt;p&gt;Pehle sab div tha. SEO kharab, code ganda, koi samajhta nahi tha.&lt;/p&gt;
+            &lt;/section&gt;
+
+            &lt;section&gt;
+                &lt;h3&gt;Part 2: Solution aa gaya&lt;/h3&gt;
+                &lt;p&gt;Ab har cheez ka alag tag hai. Saaf aur seedha.&lt;/p&gt;
+                
+                &lt;!-- Superhero 6: FIGURE --&gt;
+                &lt;figure&gt;
+                    &lt;img src="structure.jpg" alt="Website Structure"&gt;
+                    &lt;figcaption&gt;Dekho kaise header, main, footer alag alag ho gaye&lt;/figcaption&gt;
+                &lt;/figure&gt;
+            &lt;/section&gt;
+        &lt;/article&gt;
+
+        &lt;!-- Superhero 7: ASIDE --&gt;
+        &lt;aside&gt;
+            &lt;h3&gt;Pro Tip for Interview&lt;/h3&gt;
+            &lt;p&gt;Interviewer poochta hai: div vs section me farak? 
+            Section ka matlab hota hai, div ka nahi.&lt;/p&gt;
+        &lt;/aside&gt;
+
+    &lt;/main&gt;
+
+    &lt;!-- Superhero 8: FOOTER --&gt;
+    &lt;footer&gt;
+        &lt;p&gt;Copyright 2026 CodeWithBhai. All rights reserved.&lt;/p&gt;
+        &lt;p&gt;Contact: hello@codewithbhai.com&lt;/p&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Scene 4: Output - Ye Dikhega Browser Me</h2>
+    <p>Upar wala code browser me kholega to aisa dikhega:</p>
+
+    <pre><code>CodeWithBhai
+HTML seekho, Maza ke saath
+Home | Courses | About
+
+
+Semantic Tags kya hote hain?
+Published on: 22 July 2026
+
+Part 1: Pehle Problem kya thi?
+Pehle sab div tha. SEO kharab, code ganda, koi samajhta nahi tha.
+
+Part 2: Solution aa gaya
+Ab har cheez ka alag tag hai. Saaf aur seedha.
+
+[Dekho kaise header, main, footer alag alag ho gaye] 
+<- yaha image aayegi
+
+Pro Tip for Interview
+Interviewer poochta hai: div vs section me farak?
+Section ka matlab hota hai, div ka nahi.
+
+Copyright 2026 CodeWithBhai. All rights reserved.
+Contact: hello@codewithbhai.com</code></pre>
+
+    <p>Dekha? Bina CSS ke bhi structure ekdum saaf dikh raha hai. Kyuki har cheez ka naam hai.</p>
+
+    <h2>Scene 5: 9 Superhero - Naam, Kaam, Power</h2>
+
+    <h3>1. &lt;header&gt; = Dukaan ka Board</h3>
+    <p><b>Power:</b> Logo aur naam dikhata hai. Sabse upar rehta hai.</p>
+
+    <h3>2. &lt;nav&gt; = Mall ka Map</h3>
+    <p><b>Power:</b> Saare important links yahi milenge. Bina bhatke har jagah ja sakte ho.</p>
+
+    <h3>3. &lt;main&gt; = Movie ki Kahani</h3>
+    <p><b>Power:</b> Ye sabse important hai. 1 page = 1 hi main. Duplicate nahi chalega.</p>
+
+    <h3>4. &lt;article&gt; = Newspaper</h3>
+    <p><b>Power:</b> Khud me complete hai. Ise kaat ke kahin bhi chipka do, phir bhi chalega.</p>
+
+    <h3>5. &lt;section&gt; = Kitaab ke Chapter</h3>
+    <p><b>Power:</b> Bade topic ko tukdo me todta hai. Har section ka apna heading hota hai.</p>
+
+    <h3>6. &lt;aside&gt; = TV ke Side me Ads</h3>
+    <p><b>Power:</b> Main kahani se related hai par zaroori nahi. Pro Tip, Ads yahi aate hain.</p>
+
+    <h3>7. &lt;footer&gt; = Film ke End Credits</h3>
+    <p><b>Power:</b> Sabse niche. Copyright, Contact yahi milta hai.</p>
+
+    <h3>8. &lt;figure&gt; + &lt;figcaption&gt; = Photo + Neeche Caption</h3>
+    <p><b>Power:</b> Google ko batata hai "ye photo kis cheez ki hai". SEO boost.</p>
+
+    <h3>9. &lt;time&gt; = Calendar</h3>
+    <p><b>Power:</b> Machine ko date samjhata hai. Google ko pata chalta hai content naya hai.</p>
+
+    <h2>Scene 6: Climax - div vs section ka Jhagda Khatam</h2>
+    <p><code>&lt;div&gt;</code> = Sirf ek dabba. Na naam, na kaam. Bas saman bharne ke liye.</p>
+    <p>Example: Website me 2 button ko saath me rakhna hai. To unhe <code>&lt;div&gt;</code> me daal do.</p>
+
+    <p><code>&lt;section&gt;</code> = Naam wala dabba. Uspe title chipka hai.</p>
+    <p>Example: "About Us" wala hissa, "Services" wala hissa. Har ek ka heading hoga.</p>
+
+    <p><b>Golden Rule yaad rakh:</b></p>
+    <p>Agar us hisse ka upar heading ban sakta hai jaise <code>&lt;h2&gt;About Us&lt;/h2&gt;</code> to
+        <code>&lt;section&gt;</code> use karo.</p>
+    <p>Agar heading ka koi kaam nahi hai, bas design ke liye dabba chahiye to <code>&lt;div&gt;</code> use karo.</p>
+    <h2>Post Credit Scene - 3 Fayde</h2>
+    <ul>
+        <li><b>1. SEO King:</b> Google tumhari site ko pehle page pe daal dega.</li>
+        <li><b>2. Andhe Bhai ki Help:</b> Screen reader seedha bolega "Navigation shuru".</li>
+        <li><b>3. Future You:</b> 1 saal baad code khologe to 2 min me samajh aa jayega.</li>
+    </ul>
+
+    <h2>The End - Kasam Khao</h2>
+    <p>Bhai aaj ke baad kasam khao. Jaha matlab ho waha <code>&lt;div&gt;</code> ko laat maarna hai.</p>
+    <p>Ab jao. Apni purani website kholo aur saare div ko superhero me badal do 💪
+</body>
+
+</html>

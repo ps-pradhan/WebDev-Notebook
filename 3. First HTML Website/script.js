@@ -1,1 +1,2 @@
-alert("Welcome to PSP.Tech Web Development Course")
+// Page load hote hi ye message ayega
+alert("JavaScript file successfully linked! 🔥");

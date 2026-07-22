@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Fundamental | PSP.Tech</title>
     <style>
-        /* MINIMAL PRO THEME */
+        /* PRO + INTERACTIVE THEME */
         body {
             font-family: 'Inter', 'Segoe UI', sans-serif;
-            background: #f7fafc;
+            background: linear-gradient(135deg, #f7fafc 0%, #ebf8ff 100%);
             color: #2d3748;
             margin: 0;
             padding: 0;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .container {
@@ -24,54 +24,82 @@
         header {
             text-align: center;
             margin-bottom: 40px;
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         header h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             color: #1a202c;
             margin-bottom: 10px;
+            background: linear-gradient(90deg, #2b6cb0, #4299e1);
+            -webkit-background-clip: text; /* Chrome, Safari */
+            background-clip: text; /* Firefox, Edge */
+            -webkit-text-fill-color: transparent;
+            color: transparent; /* Firefox ke liye */
         }
         header p {
             color: #718096;
-            font-size: 1.1em;
+            font-size: 1.15em;
         }
 
         .main-img {
             width: 100%;
             max-width: 800px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(43, 108, 176, 0.15);
+            margin: 0 auto 40px auto;
+            display: block;
+            transition: 0.3s;
+        }
+        .main-img:hover {
+            transform: scale(1.02);
         }
 
         .section {
             background: #ffffff;
             border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 30px;
+            border-radius: 16px;
+            padding: 35px;
             margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            animation: slideUp 0.8s ease;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section:hover {
+            box-shadow: 0 10px 30px rgba(43, 108, 176, 0.1);
+            transform: translateY(-5px);
         }
         .section h2 {
             color: #2b6cb0;
-            font-size: 1.6em;
+            font-size: 1.8em;
             margin-top: 0;
-            border-bottom: 2px solid #ebf8ff;
-            padding-bottom: 10px;
+            border-bottom: 3px solid #ebf8ff;
+            padding-bottom: 12px;
             margin-bottom: 20px;
         }
 
         /* CODE BLOCK */
         .code-wrapper {
             background: #1a202c;
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 20px;
             overflow-x: auto;
-            margin-top: 15px;
+            margin-top: 20px;
+            border: 1px solid #2d3748;
         }
         .code-wrapper pre {
             margin: 0;
             color: #e2e8f0;
             font-family: 'Consolas', 'Courier New', monospace;
             font-size: 0.95em;
+            line-height: 1.6;
         }
         .code-tag { color: #63b3ed; }
         .code-attr { color: #f6ad55; }
@@ -80,18 +108,85 @@
 
         .note {
             background: #ebf8ff;
-            border-left: 4px solid #2b6cb0;
-            padding: 15px 20px;
-            border-radius: 4px;
-            margin-top: 20px;
+            border-left: 5px solid #2b6cb0;
+            padding: 18px 22px;
+            border-radius: 8px;
+            margin-top: 25px;
             color: #2c5282;
+            font-size: 1.05em;
+        }
+        .note b { color: #2b6cb0; }
+
+        /* NARRATIVE HIGHLIGHT */
+        .highlight {
+            background: linear-gradient(120deg, #bee3f8 0%, #bee3f8 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.3em;
+            background-position: 0 88%;
+            font-weight: 600;
+            padding: 0 2px;
+        }
+        
+        /* KEYBOARD STYLE */
+        kbd {
+            background: #2d3748; 
+            padding: 5px 10px; 
+            border-radius: 6px; 
+            color: #fff;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         hr {
             border: none;
             height: 1px;
-            background: #e2e8f0;
+            background: linear-gradient(to right, transparent, #cbd5e0, transparent);
             margin: 40px 0;
+        }
+
+        /* NEXT TOPIC BOX */
+        .next-topic-box {
+            background: linear-gradient(135deg, rgba(43, 108, 176, 0.08), rgba(43, 108, 176, 0.15));
+            border: 2px solid #2b6cb0;
+            padding: 35px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 50px;
+            animation: pulseBlue 2s infinite;
+        }
+        @keyframes pulseBlue {
+            0% { box-shadow: 0 0 0 0 rgba(43, 108, 176, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(43, 108, 176, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(43, 108, 176, 0); }
+        }
+        .next-topic-box h3 {
+            color: #2b6cb0;
+            font-size: 1.7em;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+        .next-topic-box p {
+            color: #4a5568;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .next-btn {
+            display: inline-block;
+            background: #2b6cb0;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.15em;
+            transition: 0.3s;
+            box-shadow: 0 5px 18px rgba(43, 108, 176, 0.4);
+        }
+        .next-btn:hover {
+            background: #2c5282;
+            transform: scale(1.06);
+            box-shadow: 0 8px 25px rgba(43, 108, 176, 0.6);
         }
     </style>
 </head>
@@ -105,10 +200,16 @@
         <img class="main-img" src="HTML Fundamental.png" alt="HTML Fundamental Diagram">
 
         <div class="section">
-            <h2>HTML Boilerplate Code kya hai?</h2>
+            <h2>🧱 HTML Boilerplate Code kya hai?</h2>
             <p>
-                Jab bhi hum nayi HTML file banate hain, toh ye basic structure likhna padta hai. 
-                Ise hi <b>Boilerplate Code</b> bolte hain. Soch lo ye website ka "template" hai.
+                Socho tumhe naya ghar banana hai. Pehle kya karoge? <span class="highlight">Foundation daaloge na?</span>
+            </p>
+            <p>
+                Bilkul waise hi, jab bhi hum nayi HTML file banate hain, toh sabse pehle hume ek <b>basic structure</b> likhna padta hai. 
+                Ise hi <b>Boilerplate Code</b> bolte hain. Ye har website ki <span class="highlight">neev ka template</span> hai.
+            </p>
+            <p>
+                Bina iske browser ko samajh hi nahi aayega ki tumne kya banaya hai. Chal dekhte hain ye template kaisa dikhta hai 👇
             </p>
             
             <div class="code-wrapper">
@@ -125,14 +226,56 @@
 <span class="code-tag">&lt;/html&gt;</span></code></pre>
             </div>
 
+            <!-- ===== PRO TIP SECTION START ===== -->
+            <div class="section" style="background: linear-gradient(135deg, #fef5e7, #fff); border: 2px dashed #f6ad55; margin-top: 30px;">
+                <h2>⚡ Pro Tip: 1 Second me Boilerplate Likho</h2>
+                <p>
+                    Bhai ratne ki zarurat hi nahi hai. Agar tum <b>VS Code</b> use kar rahe ho to ye trick use karo:
+                </p>
+                
+                <div style="background: #1a202c; color: #9ae6b4; padding: 20px; border-radius: 10px; text-align: center; margin: 20px 0; font-size: 1.2em; font-weight: bold;">
+                    Step 1: Nayi file banao → <code style="color: #63b3ed;">index.html</code> <br><br>
+                    Step 2: Keyboard pe dabao → <kbd>Shift</kbd> + <kbd>1</kbd> <br><br>
+                    Step 3: Dabao → <kbd>Enter</kbd>
+                </div>
+
+                <p>
+                    Bas! Poora Boilerplate code khud se aa jayega ✨<br>
+                    Isko bolte hain <b>Emmet Abbreviation</b>. VS Code ka sabse bada jaadu.
+                </p>
+
+                <div class="note">
+                    <b>Yaad rakhna:</b> File ka naam <code>.html</code> se end hona chahiye tabhi ye shortcut kaam karega.
+                </div>
+            </div>
+            <!-- ===== PRO TIP SECTION END ===== -->
+
             <div class="note">
-                <b>Samjho aise:</b> <br>
-                <b>`!DOCTYPE`</b> = Browser ko batata hai ye HTML5 hai <br>
-                <b>`head`</b> = Website ki settings yaha hoti hain <br>
-                <b>`body`</b> = Jo user ko dikhega wo sab yaha likhte hain
+                <b>🧠 30 Second me Samjho:</b> <br>
+                <b>`!DOCTYPE`</b> = Browser ko bolta hai "Bhai ye HTML5 hai, aise padhna" <br>
+                <b>`html`</b> = Puri website ka dabba <br>
+                <b>`head`</b> = Website ki settings aur naam. User ko nahi dikhega <br>
+                <b>`body`</b> = Jo user ko dikhega wo sab yaha likhte hain. Yehi asli content hai
             </div>
         </div>
 
+        <!-- ===== AGLE TOPIC SECTION START ===== -->
+        <div class="next-topic-box">
+            <h3>🎉 Shabaash! Topic 2 Complete</h3>
+            <p>
+                Tumne abhi seekh liya ki <b>har website ka gupt template</b> kya hota hai. 
+                Ab tum koi bhi HTML file kholo, ye structure tumhe har jagah milega.
+            </p>
+            <hr style="border: none; height: 1px; background: rgba(43, 108, 176, 0.3); margin: 20px 0;">
+            <h3 style="font-size: 1.4em; margin: 0;">🔓 Agla Topic Unlock hua: CSS aur JS ko Link Kaise Karein?</h3>
+            <p style="margin-bottom: 20px;">
+                Ab tak humne sirf haddi banayi. Ab waqt hai usme <b>jaan aur makeup</b> dalne ka. 
+                Jaanna hai kaise ek line se website ka rang aur dimaag badal jata hai?
+            </p>
+            <a href="" class="next-btn">Agle Topic ko Unlock Karo →</a>
+        </div>
+        <!-- ===== AGLE TOPIC SECTION END ===== -->
+
     </div>
 </body>
-  </html>
+</html>

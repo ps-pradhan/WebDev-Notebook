@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Episode 12: HTML Miscellaneous Tags | Netflix Notes</title>
+
+  <style>
+    /* MINIMAL CSS ONLY */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: white;
+      color: #333;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 8px;
+    }
+    h1 { text-align: center; color: #d32f2f; }
+    .scene {
+      margin: 30px 0;
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+    }
+    .warning-note {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 15px 0;
+    }
+    .info-box {
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+    .idea-box { background: #e3f2fd; border-left: 4px solid #2196f3; }
+    .tip-box { background: #e8f5e9; border-left: 4px solid #4caf50; }
+    .warning-box { background: #fff3e0; border-left: 4px solid #ff9800; }
+    
+    /* VS CODE STYLE CODE BLOCK */
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 14px;
+    }
+    .tag { color: #569cd6; }
+    .attr { color: #9cdcfe; }
+    .val { color: #ce9178; }
+    code { background: #f1f1f1; padding: 2px 5px; border-radius: 3px; }
+    pre code { background: none; padding: 0; }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th { background: #f5f5f5; }
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin: 15px 0;
+    }
+    .old-card { background: #ffebee; padding: 15px; border-radius: 8px; }
+    .modern-card { background: #e8f5e9; padding: 15px; border-radius: 8px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- SCENE 1: INTRO -->
+  <div class="scene">
+    <h1>🎬 EPISODE 13: HTML KE MISCELLANEOUS TAGS</h1>
+    
+    <div class="warning-note">
+      <b>⚠️ Important Note:</b> Ye episode thoda technical aur confusion wala ho sakta hai. 
+      Isliye tension mat lena. Tum bas pichle episodes me jo seekha usi par focus rakho. 
+      Is episode ko sirf ek baar read kar lo. Jab real project me in tags ki jarurat padegi, 
+      tab ye apne aap samajh aa jayenge. Kyunki ye tags daily use nahi hote, isliye ise 
+      bas skim karke aage badh sakte ho.
+    </div>
+    
+    <p><b>Aaj ka Agenda:</b> Entities, Quotations, Code, Canvas, Global Attributes aur Obsolete Tags ko simple examples ke saath.</p>
+  </div>
+
+  <!-- SCENE 2: HTML ENTITIES -->
+  <div class="scene">
+    <h2>SCENE 1: 🧩 HTML Entities</h2>
+    <p><b>Concept:</b> Jab HTML ke special characters ko safely display karna ho.</p>
+    
+    <div class="info-box idea-box">
+      <h3>💡 Simple Idea</h3>
+      <p>HTML mein kuch characters ka special meaning hota hai. Jaise <code>&lt;</code> aur <code>&gt;</code>. 
+      Agar humein inko text ke roop mein dikhana ho, to HTML Entities ka use karte hain.</p>
+    </div>
+    
+    <p><b>Formula:</b> <code>&amp;</code> se start aur <code>;</code> par end</p>
+    
+    <table>
+      <tr><th>Entity</th><th>Browser mein</th><th>Use</th></tr>
+      <tr><td><code>&amp;lt;</code></td><td>&lt;</td><td>Less than</td></tr>
+      <tr><td><code>&amp;gt;</code></td><td>&gt;</td><td>Greater than</td></tr>
+      <tr><td><code>&amp;amp;</code></td><td>&amp;</td><td>Ampersand</td></tr>
+      <tr><td><code>&amp;nbsp;</code></td><td>space</td><td>Non-breaking space</td></tr>
+      <tr><td><code>&amp;copy;</code></td><td>&copy;</td><td>Copyright</td></tr>
+    </table>
+    
+    <h3>Code + Output</h3>
+    <pre><code><span class="tag">&lt;p&gt;</span> 10 <span class="tag">&amp;lt;</span> 20 <span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span> Copyright <span class="tag">&amp;copy;</span> 2026 <span class="tag">&lt;/p&gt;</span></code></pre>
+    
+    <div class="info-box tip-box">
+      <h3>⚡ Remember</h3>
+      <p>Jab special character ko directly likhne me problem ho, tab Entity use karo.</p>
+    </div>
+  </div>
+
+  <!-- SCENE 3: QUOTATION TAGS -->
+  <div class="scene">
+    <h2>SCENE 2: 💬 Quotation Tags</h2>
+    <p><b>Concept:</b> Kisi person ya source ki quotation ko mark karne ke liye.</p>
+    
+    <div class="info-box idea-box">
+      <h3>💡 2 Important Tags</h3>
+      <p><code>&lt;blockquote&gt;</code> = Long quotation ke liye</p>
+      <p><code>&lt;q&gt;</code> = Short inline quotation ke liye</p>
+    </div>
+    
+    <h3>Example 1: blockquote</h3>
+    <pre><code><span class="tag">&lt;blockquote&gt;</span>
+  Learning never stops.
+<span class="tag">&lt;/blockquote&gt;</span></code></pre>
+    <p><b>Output:</b></p>
+    <blockquote>Learning never stops.</blockquote>
+    
+    <h3>Example 2: q</h3>
+    <pre><code><span class="tag">&lt;p&gt;</span> My teacher said, <span class="tag">&lt;q&gt;</span>Practice makes progress.<span class="tag">&lt;/q&gt;</span> <span class="tag">&lt;/p&gt;</span></code></pre>
+    <p><b>Output:</b></p>
+    <p>My teacher said, <q>Practice makes progress.</q></p>
+    
+    <div class="info-box tip-box">
+      <h3>⚡ Pro Tip</h3>
+      <p><code>cite</code> attribute se quotation ka source URL de sakte ho.</p>
+    </div>
+  </div>
+
+  <!-- SCENE 4: CODE TAG -->
+  <div class="scene">
+    <h2>SCENE 3: 💻 The Code Tag</h2>
+    <p><b>Concept:</b> Browser ko batana ki ye text computer code hai.</p>
+    
+    <div class="info-box idea-box">
+      <h3>💡 Simple Idea</h3>
+      <p>Webpage par code dikhane ke liye <code>&lt;code&gt;</code> tag use hota hai.</p>
+    </div>
+    
+    <h3>Inline Code</h3>
+    <pre><code><span class="tag">&lt;p&gt;</span> Use <span class="tag">&lt;code&gt;</span>console.log()<span class="tag">&lt;/code&gt;</span> <span class="tag">&lt;/p&gt;</span></code></pre>
+    <p><b>Output:</b> Use <code>console.log()</code></p>
+    
+    <div class="info-box tip-box">
+      <h3>🧠 Important Difference</h3>
+      <p><code>&lt;code&gt;</code> = code identify karta hai<br>
+      <code>&lt;pre&gt;</code> = formatting preserve karta hai<br>
+      Dono ko mila kar multiline code dikhate hain</p>
+    </div>
+    
+    <pre><code><span class="tag">&lt;pre&gt;</span>
+  <span class="tag">&lt;code&gt;</span>
+    const message = <span class="val">"Hello World"</span>;
+    console.log(message);
+  <span class="tag">&lt;/code&gt;</span>
+<span class="tag">&lt;/pre&gt;</span></code></pre>
+  </div>
+
+  <!-- SCENE 5: CHARACTER SET -->
+  <div class="scene">
+    <h2>SCENE 4: 🌍 Character Sets</h2>
+    <p><b>Concept:</b> Browser ko batana ki text ko kaise read karna hai.</p>
+    
+    <div class="info-box idea-box">
+      <h3>💡 Simple Analogy</h3>
+      <p>Browser ek language reader hai. <code>charset</code> batata hai ki characters ko kaise interpret karna hai.</p>
+    </div>
+    
+    <pre><code><span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="val">"UTF-8"</span><span class="tag">&gt;</span></code></pre>
+    <p><b>Output Example:</b> Hello 👋 | नमस्ते भारत 🇮🇳 | © 2026</p>
+    
+    <div class="info-box tip-box">
+      <h3>⚡ Remember</h3>
+      <p>Modern websites me hamesha <strong>UTF-8</strong> use karo.</p>
+    </div>
+  </div>
+
+  <!-- SCENE 6: CANVAS -->
+  <div class="scene">
+    <h2>SCENE 5: 🎨 HTML Canvas</h2>
+    <p><b>Concept:</b> Webpage ke andar graphics draw karne ka area.</p>
+    
+    <div class="info-box idea-box">
+      <h3>💡 Simple Analogy</h3>
+      <p>Canvas = Blank drawing board. HTML area deta hai, JavaScript se drawing hoti hai.</p>
+    </div>
+    
+    <pre><code><span class="tag">&lt;canvas</span> <span class="attr">id</span>=<span class="val">"myCanvas"</span> <span class="attr">width</span>=<span class="val">"300"</span> <span class="attr">height</span>=<span class="val">"150"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/canvas&gt;</span></code></pre>
+    
+    <div class="info-box warning-box">
+      <h3>⚠️ Important</h3>
+      <p>Canvas khud kuch nahi karta. Drawing ke liye JavaScript Canvas API chahiye.</p>
+    </div>
+  </div>
+
+  <!-- SCENE 7: GLOBAL ATTRIBUTES -->
+  <div class="scene">
+    <h2>SCENE 6: 🌐 Global Attributes</h2>
+    <p><b>Concept:</b> Aise attributes jo kisi bhi HTML tag ke saath use ho sakte hain.</p>
+    
+    <div class="info-box idea-box">
+      <h3>💡 Simple Idea</h3>
+      <p>Global Attributes = HTML elements ke common tools</p>
+    </div>
+    
+    <ul>
+      <li><b><code>class="container"</code></b> - Group/style karne ke liye</li>
+      <li><b><code>id="header"</code></b> - Unique identity dene ke liye</li>
+      <li><b><code>contenteditable="true"</code></b> - Content edit karne ki permission</li>
+      <li><b><code>data-user="123"</code></b> - Custom data store karne ke liye</li>
+      <li><b><code>accesskey="s"</code></b> - Keyboard shortcut</li>
+    </ul>
+  </div>
+
+  <!-- SCENE 8: OBSOLETE TAGS -->
+  <div class="scene">
+    <h2>SCENE 7: 🕰️ Obsolete HTML Tags</h2>
+    <p><b>Concept:</b> Purane tags jo ab use nahi hote. Sirf knowledge ke liye.</p>
+    
+    <div class="info-box idea-box">
+      <h3>💡 Obsolete ka matlab?</h3>
+      <p>Ye tags purane HTML ke the. Ab CSS se kaam hota hai.</p>
+    </div>
+    
+    <div class="comparison">
+      <div class="old-card">
+        <h3>❌ Old Way</h3>
+        <pre><code><span class="tag">&lt;font</span> <span class="attr">color</span>=<span class="val">"red"</span><span class="tag">&gt;</span>Hello<span class="tag">&lt;/font&gt;</span>
+<span class="tag">&lt;center&gt;</span>Hello<span class="tag">&lt;/center&gt;</span></code></pre>
+      </div>
+      <div class="modern-card">
+        <h3>✅ Modern Way</h3>
+        <pre><code><span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="val">"red-text"</span><span class="tag">&gt;</span>Hello<span class="tag">&lt;/span&gt;</span>
+<span class="comment">/* CSS: text-align: center; */</span></code></pre>
+      </div>
+    </div>
+    
+    <div class="info-box warning-box">
+      <h3>⚠️ Important</h3>
+      <p>New projects me in tags ko bilkul use mat karo. Sirf samjhne ke liye hain.</p>
+    </div>
+  </div>
+
+  <!-- CLIMAX -->
+  <div class="scene" style="background: #fffde7; border-color: #fbc02d;">
+    <h2>🔥 CLIMAX: THE BIG LESSON 🔥</h2>
+    <p>Web development evolve hota rehta hai. Purane syntax yaad rakhna jaruri nahi. 
+    Jaruri hai modern HTML + CSS approach samajhna.</p>
+    <p><b>Rule:</b> Agar koi tag confusion de, to use skip karke aage badh jao. Practice me apne aap clear ho jayega.</p>
+  </div>
+
+  <!-- POST CREDIT SCENE -->
+  <div class="scene">
+    <h2>🎬 POST CREDIT SCENE</h2>
+    <p><b>Pro Tip:</b> <code>&lt;code&gt;</code>, <code>&lt;pre&gt;</code>, <code>charset</code> ye 3 hi sabse jyada kaam aayenge.</p>
+    <p><b>Interview Tip:</b> Entity ka formula <code>&amp;name;</code> yaad rakh lo.</p>
+  </div>
+
+  <!-- END -->
+  <div class="scene" style="text-align: center;">
+    <h2>🏁 THE END</h2>
+    <p>Badhai ho! Miscellaneous tags khatam. </p>
+
+  </div>
+
+</body>
+</html>

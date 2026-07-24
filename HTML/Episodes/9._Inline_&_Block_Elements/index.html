@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Episode 09: Block vs Inline Elements</title>
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 20px;
+      background-color: white;
+      color: #333;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 8px;
+      color: #1a1a1a;
+    }
+    .note {
+      background-color: #e3f2fd;
+      padding: 12px;
+      border-left: 4px solid #2196f3;
+      border-radius: 4px;
+    }
+    
+    /* VS CODE STYLE CODE BLOCK */
+    pre {
+      background-color: #1e1e1e; /* VS Code dark bg */
+      color: #d4d4d4; /* default text */
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    /* Syntax Highlighting */
+    .tag { color: #569cd6; } /* blue */
+    .attr { color: #9cdcfe; } /* light blue */
+    .val { color: #ce9178; } /* orange */
+    .comment { color: #6a9955; } /* green */
+    
+    .demo {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px dashed #ccc;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SCENE 1: INTRO -->
+  <div>
+    <h1>🎬 EPISODE 09: BLOCK vs INLINE ELEMENTS</h1>
+    <p class="note">
+      <b>Note:</b> Abhi hum <code>style tag</code> &amp; <code>Inline CSS</code> use kar rahe hain. 
+      Future me hum <code>External CSS</code> seekhenge.
+    </p>
+    <p><b>Concept:</b> HTML me har tag ya to <b>Block</b> hota hai ya <b>Inline</b>. Layout isi se banta hai.</p>
+    <hr>
+  </div>
+
+  <!-- SCENE 2: BLOCK ELEMENTS -->
+  <div>
+    <h2 style="color: #c62828;">PART 1: BLOCK ELEMENTS</h2>
+    <p><b>Block ke 3 Rules:</b></p>
+    <ul>
+      <li>1. Hamesha <b>nayi line</b> se shuru hote hain</li>
+      <li>2. <b>Puri width</b> lete hain</li>
+      <li>3. <b>Width, Height, Margin, Padding</b> sab lagta hai</li>
+    </ul>
+
+    <h3>1. &lt;div&gt; - Generic Container</h3>
+    <p><b>Use:</b> Page ko sections me baatne ke liye</p>
+    <p><b>Code - VS Code Style:</b></p>
+    <pre><code><span class="tag">&lt;div</span> <span class="attr">style</span>=<span class="val">"background-color: lightgreen; padding: 10px;"</span><span class="tag">&gt;</span>
+  Main ek Div hun
+<span class="tag">&lt;/div&gt;</span></code></pre> 
+    <p><b>Output:</b></p>
+    <div class="demo" style="background-color: lightgreen;">Main ek Div hun</div>
+    
+    <h3>2. &lt;p&gt; - Paragraph</h3>
+    <p><b>Use:</b> Text likhne ke liye. Khud gap de deta hai.</p>
+    <p><b>Code:</b></p>
+    <pre><code><span class="tag">&lt;p</span> <span class="attr">style</span>=<span class="val">"background-color: pink;"</span><span class="tag">&gt;</span>Ye pehla paragraph hai<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">style</span>=<span class="val">"background-color: pink;"</span><span class="tag">&gt;</span>Ye dusra paragraph hai<span class="tag">&lt;/p&gt;</span></code></pre>
+    <p><b>Output:</b></p>
+    <p class="demo" style="background-color: pink;">Ye pehla paragraph hai</p>
+    <p class="demo" style="background-color: pink;">Ye dusra paragraph hai - Dekho gap aa gaya</p>
+
+    <h3>3. &lt;h1&gt; to &lt;h6&gt; - Headings</h3>
+    <p><b>Use:</b> Heading dene ke liye. SEO ke liye important.</p>
+    <p><b>Code:</b></p>
+    <pre><code><span class="tag">&lt;h1</span> <span class="attr">style</span>=<span class="val">"background-color: yellow;"</span><span class="tag">&gt;</span>Main H1 hun<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h3</span> <span class="attr">style</span>=<span class="val">"background-color: yellow;"</span><span class="tag">&gt;</span>Main H3 hun<span class="tag">&lt;/h3&gt;</span></code></pre>
+    <p><b>Output:</b></p>
+    <h1 class="demo" style="background-color: yellow; font-size: 24px;">Main H1 hun</h1>
+    <h3 class="demo" style="background-color: yellow; font-size: 18px;">Main H3 hun</h3>
+  </div>
+  <hr>
+
+  <!-- SCENE 3: INLINE ELEMENTS -->
+  <div>
+    <h2 style="color: #1565c0;">PART 2: INLINE ELEMENTS</h2>
+    <p><b>Inline ke 3 Rules:</b></p>
+    <ul>
+      <li>1. <b>Nayi line nahi</b> lete, bagal me chipak jaate hain</li>
+      <li>2. Sirf <b>content jitni width</b> lete hain</li>
+      <li>3. <b>Width, Height nahi</b> lagta. Sirf Left-Right margin/padding lagta hai</li>
+    </ul>
+
+    <h3>1. &lt;span&gt; - Generic Inline Container</h3>
+    <p><b>Use:</b> Text ke kisi hisse ko style karne ke liye</p>
+    <p><b>Code:</b></p>
+    <pre><code>Ye text <span class="tag">&lt;span</span> <span class="attr">style</span>=<span class="val">"background-color: yellow;"</span><span class="tag">&gt;</span>yellow<span class="tag">&lt;/span&gt;</span> hai</code></pre>
+    <p><b>Output:</b></p>
+    <p>Ye text <span style="background-color: yellow; padding: 2px;">yellow</span> hai</p>
+
+    <h3>2. &lt;a&gt; - Anchor / Link</h3>
+    <p><b>Use:</b> Link banane ke liye</p>
+    <p><b>Code:</b></p>
+    <pre><code><span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"#"</span> <span class="attr">style</span>=<span class="val">"background-color: lightblue; padding: 5px;"</span><span class="tag">&gt;</span>Click Me<span class="tag">&lt;/a&gt;</span></code></pre>
+    <p><b>Output:</b></p>
+    <a href="#" style="background-color: lightblue; padding: 5px; text-decoration: none; color: black;">Click Me</a>
+   
+
+    <h3>3. &lt;img&gt; - Image</h3>
+    <p><b>Use:</b> Image dikhane ke liye. <b>Exception:</b> Inline hai par width/height manta hai</p>
+    <p><b>Code:</b></p>
+    <pre><code><span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"https://via.placeholder.com/80"</span> <span class="attr">alt</span>=<span class="val">"Demo"</span><span class="tag">&gt;</span></code></pre>
+    <p><b>Output:</b></p>
+    <img src="https://via.placeholder.com/80" alt="Demo" style="border: 1px solid black;"> 
+    <img src="https://via.placeholder.com/80" alt="Demo" style="border: 1px solid black;">
+  </div>
+  <hr>
+
+  <!-- CLIMAX -->
+  <div>
+    <h2>🔥 CLIMAX: COMPARISON TABLE 🔥</h2>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Block Element</th>
+        <th>Inline Element</th>
+      </tr>
+      <tr>
+        <td><b>Nayi Line</b></td>
+        <td>Haan</td>
+        <td>Nahi</td>
+      </tr>
+      <tr>
+        <td><b>Width/Height</b></td>
+        <td>Lagti hai</td>
+        <td>Nahi lagti except img</td>
+      </tr>
+      <tr>
+        <td><b>Example</b></td>
+        <td>div, p, h1, ul, form</td>
+        <td>span, a, img, strong, input</td>
+      </tr>
+    </table>
+
+    <h3>Live Demo:</h3>
+    <p><b>Block:</b></p>
+    <div class="demo" style="background: #ffebee;">Main Block hun</div>
+    <div class="demo" style="background: #ffebee;">Main bhi Block - Nayi line</div>
+
+    <p><b>Inline:</b></p>
+    <span class="demo" style="background: #e3f2fd;">Main Inline</span>
+    <span class="demo" style="background: #e3f2fd;">Main bhi Inline - Bagal me</span>
+  </div>
+  <hr>
+
+  <!-- POST CREDIT SCENE -->
+  <div>
+    <h2>🎬 POST CREDIT SCENE</h2>
+    <p><b>Golden Rule:</b> Layout = <code>div</code> , Text ka tukda = <code>span</code></p>
+    <p><b>Interview Tip:</b> <code>img</code> inline hai par width/height leta hai. Ye exception hai.</p>
+  </div>
+  <hr>
+
+  <!-- END -->
+  <div>
+    <h2>🏁 THE END</h2>
+    <p>Badhai ho! Block vs Inline clear. </p>
+    <p><a href="Comprehensive List.txt">Comprehensive List of Inline & Block Elements</a></p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episode 01: Web Development ki Shuruat | PSP.Tech</title>
+    
+    <!-- HANDWRITING FONT IMPORT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== NETFLIX HINGLISH NOTES - MASTER TEMPLATE ===== */
+        /* EPISODE 01 THEME COLOR: RED */
+        :root {
+            --primary-color: #d32f2f;
+            --primary-light: #ffebee;
+            --primary-dark: #b71c1c;
+            --border-color: #ef9a9a;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: white;
+            color: #222;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.7;
+        }
+        
+        /* HANDWRITING ONLY FOR HEADINGS */
+        h1, .scene h2, .next-box h2 {
+            font-family: 'Caveat', cursive;
+            font-weight: 700;
+        }
+        
+        h1 { 
+            text-align: center; 
+            color: var(--primary-color); 
+            font-size: 2.8em;
+            border-bottom: 3px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        
+        /* WARNING NOTE */
+        .warning-note {
+            background: var(--primary-light);
+            border-left: 5px solid var(--primary-color);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-size: 15px;
+        }
+        .warning-note b { color: var(--primary-dark); }
+        
+        /* SCENE BOX */
+        .scene {
+            background: var(--primary-light);
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            transition: 0.3s;
+        }
+        .scene:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+        .scene h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px dashed var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .scene p, .scene li {
+            font-size: 1.05em;
+            color: #424242;
+        }
+        .scene b { color: var(--primary-dark); font-weight: 600; }
+        .scene u { text-decoration: underline dotted var(--primary-color); }
+        .scene img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+            border: 1px solid var(--border-color);
+        }
+        .scene ol, .scene ul { padding-left: 22px; }
+        
+        /* VS CODE STYLE CODE BLOCK */
+        pre {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 14px;
+            border: 1px solid #333;
+            margin: 15px 0;
+        }
+        .tag { color: #569cd6; } 
+        .attr { color: #9cdcfe; } 
+        .val { color: #ce9178; }
+        
+        /* NEXT BOX - ACHIEVEMENT + CURIOSITY */
+        .next-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 35px 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(211, 47, 47, 0.3);
+            animation: pulse 2.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(211, 47, 47, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+        }
+        .next-box h2 { color: white; margin: 0 0 15px; font-size: 2em; }
+        .next-box p { font-size: 1.05em; margin: 10px 0; }
+        .next-box hr { border: none; height: 2px; background: rgba(255,255,255,0.3); margin: 20px 0; border-radius: 2px; }
+        .next-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: 0.3s;
+            font-family: 'Poppins', sans-serif;
+        }
+        .next-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎬 EPISODE 01: WEB DEVELOPMENT KI SHURUAT</h1>
+    
+    <div class="warning-note">
+        <b>⚠️ Pro Tip:</b> Ye series ratne ke liye nahi hai. Har scene ko samjho aur code khud likho. 
+        Tabhi yaad rahega. Chalo shuru karte hain!
+    </div>
+
+    <!-- SCENE 1 -->
+    <div class="scene">
+        <h2>SCENE 1: CLIENT, BROWSER & SERVER</h2>
+        <img src="./Images/How Client, Browser & Server Works.png" alt="Client Browser Server kaise kaam karta hai">
+        <p>Website kaise chalti hai ye samajhna sabse zaruri hai. Jab tum Google pe click karte ho, tum <b>Client</b> ho. 
+        Google ka computer <b>Server</b> hai. Aur beech me <b>Browser</b> tumhara dost hai jo baat karwata hai.</p>
+    </div>
+
+    <!-- SCENE 2 -->
+    <div class="scene">
+        <h2>SCENE 2: VS CODE INSTALL KAISE KAREIN</h2>
+        <ol>
+            <li>Koi bhi text editor chalega, par hum <b>VS Code</b> use karenge.</li>
+            <li>Kyunki ye free hai, halka hai, aur Microsoft ka hai.</li>
+            <li><b>Google pe jao, "VS Code" search karo aur install kar lo</b></li>
+        </ol>
+        <p><u>Note:</u> Tum HTML Notepad me bhi likh sakte ho. VS Code se kaam 10x easy ho jata hai bas.</p>
+    </div>
+    
+    <!-- SCENE 3 -->
+    <div class="scene">
+        <h2>SCENE 3: HTML HOTA KYA HAI?</h2>
+        <p><b>HTML = Hyper Text Markup Language</b></p>
+        <ul>
+            <li>HTML website banane ki bhasha hai. Isse hum websites ka <b>skeleton</b> banate hain</li>
+            <li>Hum HTML tags ka use karke website ka structure banate hain</li>
+            <li>In tags ko jod kar hum sundar websites bana sakte hain!</li>
+        </ul>
+    </div>
+    
+    <!-- SCENE 4 -->
+    <div class="scene">
+        <h2>SCENE 4: TOH CSS AUR JAVASCRIPT KI KYA ZARURAT?</h2>
+        <p>Ek website banane ke liye 3 cheezein chahiye hoti hain:</p>
+        <ol>
+            <li><b>HTML</b> - Page ka skeleton / Haddi</li>
+            <li><b>CSS</b> - Skeleton ko sundar banata hai / Kapde aur makeup</li>
+            <li><b>JavaScript</b> - Page me jaan dalta hai / Button click pe kaam</li>
+        </ol>
+        <img src="./Images/Frontend ke 3 Stambh.png" alt="HTML Vs CSS Vs JavaScript">
+    </div>
+
+    <!-- NEXT BOX -->
+    <div class="next-box">
+        <h2>🎉 SAABASH! EPISODE 1 CLEAR 🎉</h2>
+        
+        <!-- PART 1: ACHIEVEMENT -->
+        <p><b>Level Up:</b> Ab tumhe pata hai website ka engine kaise chalta hai.<br>
+        HTML = Haddi, CSS = Kapde, JS = Dimaag. Foundation pakka ho gaya 💪</p>
+        
+        <hr>
+        
+        <!-- PART 2: CURIOSITY - EPISODE 2 REFERENCE -->
+        <h3 style="font-size: 1.5em; margin: 10px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+            🔓 NEXT EPISODE UNLOCKED 🔓
+        </h3>
+        <p style="font-size: 1.1em; font-weight: 500;">
+            Agle Episode me main tumhe <b>HTML ke Fundamentals</b> Sikhaounga  <br><br>saath main <b>Boilerplate Code</b> bhi sikhaounga jisse tumhari website browser me chalegi.
+        </p>
+        <p>
+            Ye wahi <b>Boilerplate Code</b> hai jisse Amazon, YouTube, Instagram ki website shuru hoti hai. 
+            Bina in 7 line ke tumhara code browser me chalega hi nahi.
+        </p>
+        <p style="background: rgba(255,255,255,0.15); padding: 12px; border-radius: 8px; display: inline-block;">
+            <b>Sabse bada raaz:</b> <code>&lt;!DOCTYPE html&gt;</code> likhna bhool gaye? Puri website crash 😱
+        </p>
+        <p style="font-size: 0.95em; opacity: 0.9; margin-top: 15px;">
+            Kya tum 1 second me ye <b>Boilerplate Code</b> likh paoge? Main ek jaadui trick bhi sikhaunga...
+        </p>
+        
+        <a href="../02_HTML_Fundamental/index.html" class="next-btn">EPISODE 02 UNLOCK KARO →</a>
+    </div>
+
+</body>
+</html>

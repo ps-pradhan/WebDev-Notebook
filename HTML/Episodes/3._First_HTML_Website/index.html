@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS aur JS ko Link Kaise Karein? | PSP.Tech</title>
+    <style>
+        /* Animated Gradient Background */
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            line-height: 1.7; 
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 950px; 
+            margin: auto; 
+            background: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        h1 { color: #4fc3f7; border-bottom: 2px solid #4fc3f7; padding-bottom: 10px; text-align: center; }
+        h2 { color: #81c784; margin-top: 40px; }
+        p { font-size: 16px; }
+        .note { background: rgba(255, 183, 77, 0.2); border-left: 4px solid #ffb74d; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        .demo-box { background: rgba(79, 195, 247, 0.1); padding: 25px; border: 1px dashed #4fc3f7; text-align: center; margin: 20px 0; border-radius: 8px; }
+        button { background: #4fc3f7; color: #1e1e1e; padding: 12px 25px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #03a9f4; transform: scale(1.05); }
+        
+        /* VS Code wala code box */
+        pre {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #3e4452;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 15px;
+        }
+        code .tag { color: #e06c75; }
+        code .attr { color: #d19a66; }
+        code .value { color: #98c379; }
+        code .comment { color: #5c6370; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1> </h1>
+        <h1>Episode - 3 </h1>
+       <h2 style="color: #23a6d5;"> CSS aur JavaScript File ko HTML se Kaise Jodein? </h2>
+        </h1>
+
+        <p>Bhai abhi hum HTML ka skeleton banana seekh rahe hain. Aage ke chapters me hum HTML ke saare tags detail me padhenge jisse ek strong website ka structure banega.</p>
+        
+        <p>Par usse pehle ye samajhna zaroori hai ki website ko sundar aur smart banane ke liye 2 aur file hoti hain:</p>
+        <ol>
+            <li><b>CSS</b> = Website ka Makeup Artist. Rang, font, layout sab yehi sambhalta hai.</li>
+            <li><b>JavaScript</b> = Website ka Dimaag. Button click, popup, animation sab yehi karta hai.</li>
+        </ol>
+
+        <div class="note">
+            <b>Important Note:</b> Abhi hum HTML ke tags hi seekh rahe hain. CSS aur JS ko detail me hum HTML khatam karne ke baad padhenge. 
+            Aaj hum sirf ye seekhenge ki "bani hui CSS aur JS file ko HTML me kaise jodte hain". 
+            Isko bolte hain "Linking". Ye sirf ek demo hai.
+        </div>
+        <hr>
+
+        <h2>Folder Structure</h2>
+        <p>Ek hi folder me ye 4 file banao. <b>Naam same rakhna jaruri nahi hai.</b> Ye maine demo ke liye banaya hai. <br>
+        Aapko keval dhyaan rakhna hai ki CSS file ke last me <code>.css</code> aur JS file ke last me <code>.js</code> lage.</p>
+        <pre><code>
+Mera-Project-Folder/
+├── index.html          <- Ye wali tutorial file
+├── first-website.html  <- Isko hum demo ke liye kholenge
+├── style.css           <- CSS file. Last me .css hona chahiye
+└── script.js           <- JS file. Last me .js hona chahiye
+        </code></pre>
+
+        <h2> CSS File ko Kaise Link Karein?</h2>
+        <p>CSS file ko jodne ke liye <code>&lt;head&gt;</code> ke andar <code>&lt;link&gt;</code> tag lagate hain.</p>
+        
+        <h3>VS Code me aisa dikhega:</h3>
+        <pre><code><span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Meri Website<span class="tag">&lt;/title&gt;</span>
+    <span class="comment">&lt;!-- Ye line CSS ko jodti hai --&gt;</span>
+    <span class="tag">&lt;link</span> <span class="attr">rel=</span><span class="value">"stylesheet"</span> <span class="attr">href=</span><span class="value">"style.css"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/head&gt;</span></code></pre>
+        
+        <p><b>Samjho:</b> <code>href="style.css"</code> me `style.css` ki jagah aap apni file ka naam bhi likh sakte ho. Bas last me <code>.css</code> hona chahiye.</p>
+        <hr>
+
+        <h2> JavaScript File ko Kaise Link Karein?</h2>
+        <p>JS file ko jodne ke liye <code>&lt;script&gt;</code> tag lagate hain. Isko hamesha <code>&lt;body&gt;</code> ke bilkul end me lagao.</p>
+        
+        <h3>VS Code me aisa dikhega:</h3>
+        <pre><code><span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Hello World<span class="tag">&lt;/h1&gt;</span>
+    
+    <span class="comment">&lt;!-- Ye line JS ko jodti hai --&gt;</span>
+    <span class="tag">&lt;script</span> <span class="attr">src=</span><span class="value">"script.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;</span></code></pre>
+
+        <p><b>Samjho:</b> <code>src="script.js"</code> me `script.js` ki jagah aap apni file ka naam bhi likh sakte ho. Bas last me <code>.js</code> hona chahiye. <br>
+        <b>Kyu end me?</b> Taaki pehle website dikhe, phir JS chale. Nahi to website slow lagegi.</p>
+        <hr>
+
+        <h2> Chalo Proof Dekhte Hain - Live Demo</h2>
+        <p>Niche wali website me maine CSS aur JS dono link ki hain. Button dabao aur dekho 👇</p>
+
+        <div class="demo-box">
+            <a href="first-website.html" target="_blank">
+                <button>Live Demo: My First Website Dekho</button>
+            </a>
+            <p style="font-size: 14px; margin-top: 15px;">New tab me khulegi. Waha background color aur alert check karna.</p>
+        </div>
+        
+        <div class="note">
+            <b>Aage kya?</b> Agle chapter me hum HTML ke aur tags padhenge. HTML complete hone ke baad hi hum CSS aur JS ko detail me start karenge.
+        </div>
+    </div>
+
+</body>
+</html>

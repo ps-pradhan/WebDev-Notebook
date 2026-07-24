@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>ID vs CLASS</title>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Episode 07: ID aur CLASS in HTML</h1>
+
+            <!-- ID SECTION -->
+        <div class="section">
+            <h2>ID</h2>
+            <p class="desc">Page me sirf 1 unique element ke liye. CSS me <code>#</code> se likhte hain. 1 baar hi use hogi.</p>
+
+            <div class="grid">
+                <div class="code">
+                    <h4>HTML</h4>
+                    <pre>&lt;button id="alert-btn"&gt;Delete&lt;/button&gt;</pre>
+                    <h4 style="margin-top:15px;">CSS</h4>
+                    <pre>#alert-btn {
+  background: #da3633;
+  font-weight: bold;
+}</pre>
+                </div>
+                <div class="result">
+                    <h4>OUTPUT</h4>
+                    <button class="btn" id="alert-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CLASS SECTION -->
+        <div class="section">
+            <h2>CLASS</h2>
+            <p class="desc">Ek jaisi styling wale multiple elements ke liye. CSS me <code>.</code> se likhte hain. Kitni bhi baar use kar sakte.</p>
+            
+            <div class="grid">
+                <div class="code">
+                    <h4>HTML</h4>
+                    <pre>&lt;button class="btn"&gt;Save&lt;/button&gt;
+&lt;button class="btn"&gt;Update&lt;/button&gt;</pre>
+                    <h4 style="margin-top:15px;">CSS</h4>
+                    <pre>.btn {
+  background: #1f6feb;
+  padding: 10px 20px;
+}</pre>
+                </div>
+                <div class="result">
+                    <h4>OUTPUT</h4>
+                    <button class="btn">Save</button>
+                    <button class="btn">Update</button>
+                </div>
+            </div>
+        </div>
+
+    
+
+        <!-- SUMMARY SECTION -->
+        <div class="summary">
+            <h2>Quick Summary</h2>
+            <table border="1" cellpadding="10" cellspacing="0">
+                 <tr>
+                    <td>ID</td>
+                    <td><code>#name</code> | Single use | JS/Link/Unique ke liye</td>
+                </tr>
+                <tr>
+                    <td>CLASS</td>
+                    <td><code>.name</code> | Multiple use | Styling ke liye</td>
+                </tr>
+                <tr>
+                    <td>Priority</td>
+                    <td>ID > CLASS. Dono takraye toh ID jeetegi</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+      </html>
